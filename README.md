@@ -27,7 +27,7 @@ Language: PHP, CSS, JS, mySQL
 5. Choose location as htdocs(xampp) or www(wamp)
 6. Would you like to open folder in workspace? Yes
 
-###### git clone https://github.com/Nikosgo/NUS-RCMS.git
+###### git clone https://github.com/Nikosgo/NUS-RCMS-1.git
 
 ###### Selecting your branch
 1. VSCODE: Left Side of Screen, Source Control
