@@ -1,5 +1,5 @@
 <?php
-require("../entity/paper.php");
+	require("../model/paper.php");
 ?>
 
 <?php
