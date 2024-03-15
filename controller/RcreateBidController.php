@@ -8,7 +8,7 @@ class RcreateBidController
 {
 
 	function __construct()
-	{
+	{   
 	}
 	function createBid($pid, $uid)
 	{
