@@ -57,6 +57,6 @@ $sql = "insert into tbl_comments (content, reviewID, userID) VALUES ('comment co
 $conn->query($sql);
 $conn->close();
 
-header("Location: http://localhost/314/ui");
+header("Location: http://localhost/314/view");
 
 ?>

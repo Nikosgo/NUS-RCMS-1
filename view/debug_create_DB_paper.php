@@ -70,6 +70,6 @@ $sql = "insert into tbl_papers (title, content, authorID, status, reviewerID, au
 $conn->query($sql);
 $conn->close();
 
-header("Location: http://localhost/314/ui");
+header("Location: http://localhost/314/view");
 
 ?>

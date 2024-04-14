@@ -1,7 +1,7 @@
 <?php
-require("../entity/review.php");
-require("../entity/paper.php");
-require("../entity/user.php");
+require("../model/review.php");
+require("../model/paper.php");
+require("../model/user.php");
 ?>
 
 <?php

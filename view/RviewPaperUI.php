@@ -9,14 +9,14 @@
 <body>
     <?php
     //insert support/display functions here
-    require("../control/RviewPaperController.php");
+    require("../controller/RviewPaperController.php");
     session_start();
     $uid = $_SESSION['UID'];
     $viewPaperController1 = new RviewPaperController();
     $pid = $_POST['PID'];
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayPaper($result)
     {
@@ -51,7 +51,7 @@
             </div>
         </form>
         <!-- Create Bid Button -->
-        <form action="../ui/RcreateBidUI.php" method="POST" class="row">
+        <form action="../view/RcreateBidUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="uid" name="uid" value="<?php echo $uid ?>">
                 <input type="hidden" id="pid" name="pid" value="<?php echo $pid ?>">
@@ -61,7 +61,7 @@
             </div>
         </form>
         <!-- Create Review Button -->
-        <form action="../ui/RcreateReviewUI.php" method="POST" class="row">
+        <form action="../view/RcreateReviewUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="uid" name="uid" value="<?php echo $uid ?>">
                 <input type="hidden" id="pid" name="pid" value="<?php echo $pid ?>">

@@ -1,6 +1,6 @@
 <?php
-require("../entity/review.php");
-require("../entity/paper.php");
+require("../model/review.php");
+require("../model/paper.php");
 ?>
 
 <?php

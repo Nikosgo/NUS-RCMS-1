@@ -11,7 +11,7 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard.php';</script>";
     }
     function displayUsers($result)
     {
@@ -68,7 +68,7 @@
                 <th></th><!-- delete -->
             </tr>
             <?php
-            require("../control/SAviewUserController.php");
+            require("../controller/SAviewUserController.php");
             $viewUserController1 = new SAviewUserController();
             if(!$result = $viewUserController1->viewUser()){
                 displayError("Failed to display users!");

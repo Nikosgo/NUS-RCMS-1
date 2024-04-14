@@ -1,6 +1,6 @@
 <?php
-require("../entity/bid.php");
-require("../entity/paper.php");
+require("../model/bid.php");
+require("../model/paper.php");
 ?>
 
 <?php

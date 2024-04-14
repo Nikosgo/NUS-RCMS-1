@@ -1,6 +1,6 @@
 <?php
 //NEW USED FOR SEARCH DELETE AFTER CHECKED
-require("../entity/paper.php");
+require("../model/paper.php");
 class RsearchPaperController
 {
 

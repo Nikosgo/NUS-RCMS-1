@@ -12,15 +12,15 @@
     //insert support/display functions here
     function displayError($msg)
 	{ //displays error message
-		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/authorDashboard_myPapers.php';</script>";
+		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/authorDashboard_myPapers.php';</script>";
 	}
 	function displaySuccess($msg)
 	{ //displays success message
-		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/authorDashboard_myPapers.php';</script>";
+		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/authorDashboard_myPapers.php';</script>";
 	}
 
     $pid = $_POST['PID'];
-    require("../control/AdeletePaperController.php");
+    require("../controller/AdeletePaperController.php");
     $AdeletePaperController1 = new AdeletePaperController();
 
     if(!$AdeletePaperController1->deletePaper($pid)){
@@ -50,7 +50,7 @@
         take in user input
     -->
         <!--
-    <form action="../ui/SAdeleteUserUI.php" method="POST" class="row">
+    <form action="../view/SAdeleteUserUI.php" method="POST" class="row">
         <div class="col-auto">
             <input type="hidden" id="flag" name="flag" value=1>
             <br>

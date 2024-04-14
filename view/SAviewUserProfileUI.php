@@ -11,7 +11,7 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard.php';</script>";
     }
     function displayUserProfiles($result)
     {
@@ -47,7 +47,7 @@
                 <th></th><!-- edit -->
             </tr>
             <?php
-            require("../control/SAviewUserProfileController.php");
+            require("../controller/SAviewUserProfileController.php");
             $viewUserProfileController = new SAviewUserProfileController();
             $result = $viewUserProfileController->viewUserProfile();
             if ($result) displayUserProfiles($result);

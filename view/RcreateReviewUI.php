@@ -7,11 +7,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayForm()
     {
@@ -21,7 +21,7 @@
         set flag
         take in user input
     -->
-        <form action="../ui/RcreateReviewUI.php" method="POST" class="row">
+        <form action="../view/RcreateReviewUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <input type="hidden" id="pid" name="pid" value="<?php echo $_POST['pid'] ?>">
@@ -58,7 +58,7 @@
             $rating = $_POST['rating'];
             $pid = $_POST['pid'];
             //require("");//require controller
-            require("../control/RcreateReviewController.php");
+            require("../controller/RcreateReviewController.php");
             //instantiate controller
             $createReviewController1 = new CreateReviewController();
             //$Controller1 = new Controller();

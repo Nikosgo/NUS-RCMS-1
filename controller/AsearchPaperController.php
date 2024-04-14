@@ -1,6 +1,6 @@
 <?php
 
-require("../Model/paper.php");
+require("../model/paper.php");
 class AsearchPaperController
 {
 

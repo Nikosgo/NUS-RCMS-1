@@ -10,18 +10,18 @@
     <?php
     //insert support/display functions here
     $uid = $_POST["UID"];
-    require("../control/SAeditUserController.php");
+    require("../controller/SAeditUserController.php");
     $editUserController1 = new SAeditUserController();
     
 
 
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard.php';</script>";
     }
     function displayForm($result)
     {
@@ -37,7 +37,7 @@
         set flag
         take in user input
     -->
-        <form action="../ui/SAeditUserUI.php" method="POST" class="row">
+        <form action="../view/SAeditUserUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="UID" name="UID" value=<?php echo $uid; ?>>
                 <input type="hidden" id="flag" name="flag" value=1>
@@ -50,7 +50,7 @@
                 <label for="userProfile">User Profile:</label>
                 <select name="userProfile" id="userProfile">
                     <?php
-                    require("../control/SAviewUserProfileController.php");
+                    require("../controller/SAviewUserProfileController.php");
                     $viewUserProfileController = new SAviewUserProfileController();
                     $result1 = $viewUserProfileController->viewUserProfile();
                     //debug_to_console($result1);
@@ -86,7 +86,7 @@
             $profileName = $_POST["userProfile"];
 
             //require("");//require controller
-            //require("../control/editUserController.php");
+            //require("../controller/editUserController.php");
             //instantiate controller
             //$Controller1 = new Controller();
             //$editUserController1 = new EditUserController();

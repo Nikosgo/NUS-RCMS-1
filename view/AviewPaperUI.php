@@ -9,14 +9,14 @@
 <body>
     <?php
     //insert support/display functions here
-    require("../control/AviewPaperController.php");
+    require("../controller/AviewPaperController.php");
     session_start();
     $uid = $_SESSION['UID'];
     $editPaperController1 = new AviewPaperController();
     $pid = $_POST['PID'];
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/authorDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/authorDashboard.php';</script>";
     }
     function displayPaper($result)
     {

@@ -65,6 +65,6 @@ $conn->query($sql);
 }
 $conn->close();
 
-header("Location: http://localhost/314/ui");
+header("Location: http://localhost/314/view");
 
 ?>

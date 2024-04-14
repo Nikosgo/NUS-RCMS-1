@@ -56,6 +56,6 @@ $sql = "insert into tbl_profiles (userProfile) VALUES ('SystemAdmin'),
 $conn->query($sql);
 $conn->close();
 
-header("Location: http://localhost/314/ui");
+header("Location: http://localhost/314/view");
 
 ?>

@@ -13,11 +13,11 @@
     </style>
     <?php
     $uid = $_SESSION['UID'];
-    require("../control/RviewAssignedPapersController.php");
+    require("../controller/RviewAssignedPapersController.php");
     if (!function_exists("displayError")) {
         function displayError($msg)
         { //displays error message
-            echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+            echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
         }
     }
     function displayAssignedPapers($result)

@@ -9,16 +9,16 @@
     {
         switch ($profile) { //depend on which userProfile, display specific dashboard page
             case "SystemAdmin":
-                header("Location: http://localhost/314/ui/systemAdminDashboard.php");
+                header("Location: http://localhost/314/view/systemAdminDashboard.php");
                 break;
             case "ConferenceChair":
-                header("Location: http://localhost/314/ui/ccDashboard.php");
+                header("Location: http://localhost/314/view/ccDashboard.php");
                 break;
             case "Reviewer":
-                header("Location: http://localhost/314/ui/reviewerDashboard.php");
+                header("Location: http://localhost/314/view/reviewerDashboard.php");
                 break;
             case "Author":
-                header("Location: http://localhost/314/ui/authorDashboard.php");
+                header("Location: http://localhost/314/view/authorDashboard.php");
                 break;
             default:
                 echo "Unknown UserProfile";
@@ -26,12 +26,12 @@
     }
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/USERloginUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/USERloginUI.php';</script>";
     }
     function displayLoginUI()
     {
     ?>
-        <form action="../ui/USERloginUI.php" method="POST" class="row">
+        <form action="../view/USERloginUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="email" class="form-label">Email:</label><br>
@@ -52,7 +52,7 @@
         if ($_POST['flag'] == 1) {
             $user_email = $_POST["email"];
             $user_password = $_POST["password"];
-            require("../control/USERloginController.php");
+            require("../controller/USERloginController.php");
             $loginController1 = new USERLoginController();
             if (!$result = $loginController1->validateLogin($user_email, $user_password)) {
                 displayError("Login Failed! Username/Password not found!");

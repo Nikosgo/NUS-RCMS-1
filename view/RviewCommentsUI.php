@@ -13,7 +13,7 @@
     </style>
     <?php
     $uid = $_SESSION['UID'];
-    require_once("../control/RviewCommentsController.php");
+    require_once("../controller/RviewCommentsController.php");
     if (!function_exists("noComments")) {
         function noComments($msg)
         { //displays error message

@@ -9,14 +9,14 @@
 <body>
     <?php
     //insert support/display functions here
-    require("../control/SAeditUserProfileController.php");
+    require("../controller/SAeditUserProfileController.php");
     function displayForm($result){
         $row = $result->fetch_assoc();
 
         $userProfile = $row["userProfile"];
         $upid = $row["UPID"];
         ?>
-        <form action="../ui/SAeditUserProfileUI.php" method="POST" class="row">
+        <form action="../view/SAeditUserProfileUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="UPID" name="UPID" value="<?php echo $upid ?>">
                 <input type="hidden" id="flag" name="flag" value=1>
@@ -31,11 +31,11 @@
 
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard_userProfiles.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard_userProfiles.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard_userProfiles.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard_userProfiles.php';</script>";
     }
 
     if (isset($_POST['flag'])) {

@@ -18,7 +18,7 @@
     //insert support/display functions here
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayTable($result)
     { ?>
@@ -78,7 +78,7 @@
             //require("");//require controller
             //instantiate controller
             //$Controller1 = new Controller();
-            require("../control/RsearchPaperController.php");
+            require("../controller/RsearchPaperController.php");
             $RsearchPaperController1 = new RsearchPaperController();
             if ($result = $RsearchPaperController1->searchPaper($query)) {
                 displayTable($result);
@@ -97,7 +97,7 @@
     -->
         <!-- displaySearchForm -->
         <h2>Search Papers</h2>
-        <form action="../ui/RsearchPaperUI.php" method="POST" class="row">
+        <form action="../view/RsearchPaperUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="query" class="form-label">Search:</label><br>

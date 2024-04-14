@@ -7,11 +7,11 @@
 
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayForm($result)
     {
@@ -24,7 +24,7 @@
         set flag
         take in user input
     -->
-        <form action="../ui/ReditCommentUI.php" method="POST" class="row">
+        <form action="../view/ReditCommentUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <input type="hidden" id="CID" name="CID" value="<?php echo $cid ?>">
@@ -43,7 +43,7 @@
     <?php
     session_start();
     //insert support/display functions here
-    require("../control/ReditCommentController.php");
+    require("../controller/ReditCommentController.php");
     $userID = $_SESSION['UID'];
     $ReditCommentController1 = new ReditCommentController();
     if (isset($_POST['flag'])) {

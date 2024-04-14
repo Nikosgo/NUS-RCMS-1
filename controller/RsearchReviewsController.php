@@ -1,5 +1,5 @@
 <?php
-require("../entity/review.php");
+require("../model/review.php");
 class RsearchReviewsController
 {
 

@@ -34,7 +34,7 @@ if (isset($_POST['flag'])) {
         take in user input
     -->
     <!--
-    <form action="../ui/loginUI.php" method="POST" class="row">
+    <form action="../view/loginUI.php" method="POST" class="row">
         <div class="col-auto">
             <input type="hidden" id="flag" name="flag" value=1>
             <label for="email" class="form-label">Email:</label><br>

@@ -14,7 +14,7 @@
     <?php
         function displayError($msg)
         { //displays error message
-            echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/authorDashboard.php';</script>";
+            echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/authorDashboard.php';</script>";
         }
         function displayTable($result){
             while ($row = $result->fetch_assoc()) {
@@ -82,7 +82,7 @@
                     <th></th><!-- delete -->
                 </tr>
                 <?php
-                require("../control/AviewMyPapersController.php");
+                require("../controller/AviewMyPapersController.php");
                 $viewMyPaperController1 = new viewMyPapersController();
                 //$title, $paper, $authorName, $file, $reviewerID, $reviewerComment
                 $result = $viewMyPaperController1->viewMyPapers($_SESSION['UID']);
