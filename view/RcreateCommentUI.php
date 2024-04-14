@@ -7,11 +7,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayForm()
     {
@@ -22,7 +22,7 @@
         set flag
         take in user input
     -->
-        <form action="../ui/RcreateCommentUI.php" method="POST" class="row">
+        <form action="../view/RcreateCommentUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <input type="hidden" id="rid" name="rid" value="<?php echo $_POST['rid'] ?>">
@@ -48,7 +48,7 @@
             $content = $_POST['content'];
             $reviewID = $_POST['rid'];
             //require("");//require controller
-            require("../control/RcreateCommentController.php");
+            require("../controller/RcreateCommentController.php");
             //instantiate controller
             $createCommentController1 = new CreateCommentController();
             //$Controller1 = new Controller();

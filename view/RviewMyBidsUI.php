@@ -14,10 +14,10 @@
     <?php
     session_start();
     $uid = $_SESSION['UID'];
-    require("../control/RviewMyBidsController.php");
+    require("../controller/RviewMyBidsController.php");
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayBiddedPapers($result)
     {

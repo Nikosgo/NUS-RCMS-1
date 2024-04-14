@@ -13,7 +13,7 @@
     </style>
     <?php
     $uid = $_SESSION['UID'];
-    require("../control/RviewPaperReviewsController.php");
+    require("../controller/RviewPaperReviewsController.php");
     function noReviews($msg)
     { //displays error message
         echo "$msg";

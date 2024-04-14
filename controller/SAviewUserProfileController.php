@@ -1,6 +1,6 @@
 <?php
-require("../entity/userProfile.php");
-//require_once("./entity/userProfile.php");//for unit testing
+require("../model/userProfile.php");
+//require_once("./model/userProfile.php");//for unit testing
 class SAviewUserProfileController{
 
     public function __construct(){}

@@ -11,7 +11,7 @@
     //insert support/display functions here
     function displayForm(){
         ?>
-        <form action="../ui/SAcreateUserUI.php" method="POST" class="row">
+        <form action="../view/SAcreateUserUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="name" class="form-label">Name:</label><br>
@@ -23,7 +23,7 @@
                 <label for="userProfile">User Profile:</label>
                 <select name="userProfile" id="userProfile">
                     <?php
-                    require("../control/SAviewUserProfileController.php");
+                    require("../controller/SAviewUserProfileController.php");
                     $viewUserProfileController = new SAviewUserProfileController();
                     $result = $viewUserProfileController->viewUserProfile();
                     if ($result->num_rows > 0) {
@@ -43,11 +43,11 @@
 
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/SAcreateUserUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/SAcreateUserUI.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard.php';</script>";
     }
 
     if (isset($_POST['flag'])) {
@@ -58,7 +58,7 @@
             $password = $_POST["password"];
             $profileName = $_POST["userProfile"];
             //require("");//require controller
-            require("../control/SAcreateUserController.php");
+            require("../controller/SAcreateUserController.php");
             //instantiate controller
             $createUserController1 = new SACreateUserController();
             //$Controller1 = new Controller();

@@ -11,13 +11,13 @@
     //insert support/display functions here
     session_start();
     $uid = $_SESSION["UID"];
-    require("../control/ReditWorkloadController.php");
+    require("../controller/ReditWorkloadController.php");
     function displayForm($result)
     { //edit style form with default value as current workload (new users default to workload of 5)
         $row = $result->fetch_assoc();
         $workload = $row['workload'];
     ?>
-        <form action="../ui/ReditWorkloadUI.php" method="POST" class="row">
+        <form action="../view/ReditWorkloadUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="UID" name="UID" value="<?php echo $_SESSION["UID"]; ?>">
                 <input type="hidden" id="flag" name="flag" value=1>
@@ -32,11 +32,11 @@
 
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
 
     if (isset($_POST['flag'])) {

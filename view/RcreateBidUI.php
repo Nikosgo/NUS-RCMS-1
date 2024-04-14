@@ -9,14 +9,14 @@
 <body>
     <?php
     //insert support/display functions here
-    require("../control/RcreateBidController.php");
+    require("../controller/RcreateBidController.php");
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
 
     $pid = $_POST['pid'];

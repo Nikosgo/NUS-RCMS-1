@@ -11,11 +11,11 @@
     //insert support/display functions here
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/SAcreateUserProfileUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/SAcreateUserProfileUI.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/systemAdminDashboard_userProfiles.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/systemAdminDashboard_userProfiles.php';</script>";
     }
 
     if (isset($_POST['flag'])) {
@@ -23,7 +23,7 @@
             //retrieve $_POST vars
             $profileName = $_POST["profileName"];
             //require("");//require controller
-            require("../control/SAcreateUserProfileController.php");
+            require("../controller/SAcreateUserProfileController.php");
             //instantiate controller
             //$Controller1 = new Controller();
             $createUserProfileController1 = new SACreateUserProfileController();
@@ -45,7 +45,7 @@
         set flag
         take in user input
     -->
-        <form action="../ui/SAcreateUserProfileUI.php" method="POST" class="row">
+        <form action="../view/SAcreateUserProfileUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="profileName" class="form-label">Profile Name:</label><br>

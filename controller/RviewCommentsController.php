@@ -1,5 +1,5 @@
 <?php
-require("../entity/comment.php");
+require("../model/comment.php");
 
 class ViewCommentsController
 {

@@ -1,5 +1,5 @@
 <?php
-require("../entity/user.php");
+require("../model/user.php");
 
 class ViewWorkloadController
 {

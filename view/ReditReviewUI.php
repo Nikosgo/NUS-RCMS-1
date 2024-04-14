@@ -7,11 +7,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayForm($result)
     {
@@ -24,7 +24,7 @@
         set flag
         take in user input
     -->
-        <form action="../ui/ReditReviewUI.php" method="POST" class="row">
+        <form action="../view/ReditReviewUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <input type="hidden" id="RID" name="RID" value="<?php echo $_POST['RID'] ?>">
@@ -51,7 +51,7 @@
 
 <body>
     <?php
-    require("../control/ReditReviewController.php");
+    require("../controller/ReditReviewController.php");
     session_start();
     //insert support/display functions here
     if (isset($_POST['flag'])) {

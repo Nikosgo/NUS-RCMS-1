@@ -7,11 +7,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/AcreatePaperUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/AcreatePaperUI.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/authorDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/authorDashboard.php';</script>";
     }
     function displayForm(){
         ?>
@@ -20,7 +20,7 @@
         set flag
         take in user input
     -->
-        <form action="../ui/AcreatePaperUI.php" method="POST" class="row">
+        <form action="../view/AcreatePaperUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="title" class="form-label">Title:</label><br>
@@ -54,7 +54,7 @@
             $coAuthor = $_POST['coAuthor'];
             //$profileName = $_POST["userProfile"]; //may reuse for add another author 
             //require("");//require controller
-            require("../control/AcreatePaperController.php");
+            require("../controller/AcreatePaperController.php");
             //instantiate controller
             $createPaperController1 = new CreatePaperController();
             //$Controller1 = new Controller();

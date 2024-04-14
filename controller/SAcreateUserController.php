@@ -4,8 +4,8 @@
 //$password = $_POST["password"];
 //$profileName = $_POST["userProfile"];
 
-require("../entity/user.php");
-//require_once("./entity/user.php");//for unit testing
+require("../model/user.php");
+//require_once("./model/user.php");//for unit testing
 ?>
 
 <?php

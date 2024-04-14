@@ -18,7 +18,7 @@
     //insert support/display functions here
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/reviewerDashboard.php';</script>";
     }
     function displayTable($result)
     { ?>
@@ -79,7 +79,7 @@
             //require("");//require controller
             //instantiate controller
             //$Controller1 = new Controller();
-            require("../control/RsearchReviewsController.php");
+            require("../controller/RsearchReviewsController.php");
             $RsearchReviewsController1 = new RsearchReviewsController();
             if ($result = $RsearchReviewsController1->searchReview($pid)) {
                 displayTable($result);
@@ -98,7 +98,7 @@
     -->
         <!-- displaySearchForm -->
         <h2>Search Reviews</h2>
-        <form action="../ui/RsearchReviewsUI.php" method="POST" class="row">
+        <form action="../view/RsearchReviewsUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="pid" class="form-label">Search by PID, RID or content:</label><br>
