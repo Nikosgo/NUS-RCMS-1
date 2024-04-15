@@ -12,11 +12,11 @@
     //insert support/display functions here
     function displayError($msg)
 	{ //displays error message
-		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/authorDashboard_myPapers.php';</script>";
+		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/authorDashboard_myPapers.php';</script>";
 	}
 	function displaySuccess($msg)
 	{ //displays success message
-		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/view/authorDashboard_myPapers.php';</script>";
+		echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/authorDashboard_myPapers.php';</script>";
 	}
 
     $pid = $_POST['PID'];

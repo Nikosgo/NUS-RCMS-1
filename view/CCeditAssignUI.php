@@ -13,11 +13,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/CCviewAssignedUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/CCviewAssignedUI.php';</script>";
     }
 
     function displaySuccess($msg) {
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/CCviewAssignedUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/CCviewAssignedUI.php';</script>";
     }
 
     function displayForm($result) {
@@ -60,7 +60,7 @@
                     echo "</td>";
                     echo "<td>"; ?>
                     <!-- takes the input of paperID, reviewerID, changed reviewerID -->
-                    <form action="../ui/CCeditAssignUI.php" method="POST" class="row">
+                    <form action="../view/CCeditAssignUI.php" method="POST" class="row">
                         <div class="col-auto">
                             <input type="hidden" id="flag" name="flag" value=1>
                             <input type="hidden" id="PID" name="PID" value="<?php echo $pid ?>">
@@ -96,7 +96,7 @@
 <body>
     <h2> Edit Assigned Paper </h2>
     <?php
-    require("../control/CCeditAssignController.php");
+    require("../controller/CCeditAssignController.php");
     session_start();
     if (isset($_POST['flag'])) {
         if ($_POST['flag'] == 1) {

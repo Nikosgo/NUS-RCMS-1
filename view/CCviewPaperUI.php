@@ -9,18 +9,18 @@
 <body>
     <?php
     //insert support/display functions here
-    require("../control/CCviewPaperController.php");
+    require("../controller/CCviewPaperController.php");
     session_start();
     
     $viewPaperController1 = new CCviewPaperController();
     $pid = $_POST['PID'];
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/ccDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/ccDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/ccDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/ccDashboard.php';</script>";
     }
 
     function displayPaper($result){

@@ -14,7 +14,7 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/ccDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/ccDashboard.php';</script>";
     }
     function displayTable($result){
         while ($row = $result->fetch_assoc()) {
@@ -63,7 +63,7 @@
                 <th></th><!-- Assign -->
             </tr>
             <?php
-            require("../control/CCviewBidsController.php");
+            require("../controller/CCviewBidsController.php");
             $viewBidController1 = new viewBidsController();
             //
             $result = $viewBidController1->viewReadyAssign();
