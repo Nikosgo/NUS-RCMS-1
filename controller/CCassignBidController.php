@@ -1,7 +1,7 @@
 <?php
-require("../entity/bid.php");
-require("../entity/paper.php");
-require("../entity/user.php");
+require("../model/bid.php");
+require("../model/paper.php");
+require("../model/user.php");
 ?>
 
 <?php

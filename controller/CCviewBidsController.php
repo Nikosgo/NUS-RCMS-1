@@ -1,5 +1,5 @@
 <?php
-require("../entity/bid.php");
+require("../model/bid.php");
 
 class ViewBidsController
 {
