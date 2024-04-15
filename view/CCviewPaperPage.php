@@ -24,7 +24,7 @@
     <br><br>
     
     <!-- Accept Paper Button -->
-    <form action="../ui/CCacceptPaperUI.php" method="POST" class="row">
+    <form action="../view/CCacceptPaperUI.php" method="POST" class="row">
         <div class="col-auto">
             <input type="hidden" id="uid" name="uid" value="<?php echo $GLOBALS['authorID'] ?>">
             <input type="hidden" id="pid" name="pid" value="<?php echo $pid ?>">
@@ -33,7 +33,7 @@
     </form>
 
     <!-- Reject Paper Button -->
-    <form action="../ui/CCrejectPaperUI.php" method="POST" class="row">
+    <form action="../view/CCrejectPaperUI.php" method="POST" class="row">
         <div class="col-auto">
             <input type="hidden" id="uid" name="uid" value="<?php echo $GLOBALS['authorID'] ?>">
             <input type="hidden" id="pid" name="pid" value="<?php echo $pid ?>">

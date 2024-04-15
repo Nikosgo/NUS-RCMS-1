@@ -18,12 +18,12 @@
     //insert support/display functions here
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/ccDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/ccDashboard.php';</script>";
     }
     function displayForm()
     {
     ?>
-        <form action="../ui/CCsearchPaperUI.php" method="POST" class="row">
+        <form action="../view/CCsearchPaperUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="query" class="form-label">Search:</label><br>
@@ -92,7 +92,7 @@
             //require("");//require controller
             //instantiate controller
             //$Controller1 = new Controller();
-            require("../control/CCsearchPaperController.php");
+            require("../controller/CCsearchPaperController.php");
             $CCsearchPaperController1 = new CCsearchPaperController();
             $result = $CCsearchPaperController1->searchPaper($query);
             if ($result) {

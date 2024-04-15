@@ -13,7 +13,7 @@
     </style>
     <?php
     $uid = $_SESSION['UID'];
-    require("../control/CCviewPaperReviewsController.php");
+    require("../controller/CCviewPaperReviewsController.php");
     function noReviews($msg)
     { //call this if no reviews
         echo "$msg";

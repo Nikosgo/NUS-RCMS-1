@@ -11,7 +11,7 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/314/ui/ccDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/ccDashboard.php';</script>";
     }
     function displayPapers($result){
         while ($row = $result->fetch_assoc()) {
@@ -54,7 +54,7 @@
                 <th></th><!-- view -->
             </tr>
             <?php
-            require("../control/CCviewPapersController.php");
+            require("../controller/CCviewPapersController.php");
             $viewPaperController1 = new viewPapersController();
             //$title, $paper, $authorName, $file, $reviewerID, $reviewerComment
             $result = $viewPaperController1->viewPapers();
