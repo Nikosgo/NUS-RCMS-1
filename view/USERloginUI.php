@@ -5,6 +5,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
+    <style>
+        h2 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 28px;
+            color: #333;
+            text-shadow: 2px 2px 2px #888;
+            text-align: center;
+            border-bottom: 2px solid #ccc; /* Adding a decorative border bottom */
+            margin-bottom: 20px; /* Adding some margin for spacing */
+            margin-top: 20px; /* Adding some margin for spacing */
+        }
+        </style>
     <?php
     function displayDashboard($profile)
     {
@@ -31,21 +43,25 @@
     }
     function displayLoginUI()
     {
-    ?>
-    <div id="login">
-        <form action="../view/USERloginUI.php" method="POST" >
-            <h1>Log In</h1>
-            <div class="col-auto">
-                <input type="hidden" id="flag" name="flag" value=1>
-                <input class="form-control" type="email" id="email" name="email" placeholder="email">
-                <input class="form-control" type="password" id="password" name="password" placeholder="password">
-                <button>Sign In</button>
-                <!-- <input class="form-control" type="submit" value="Submit"> -->
-            </div>
-    </div>
-        <?php
-    }
         ?>
+        <h2>Research Conference Management System</h2>
+        <div id="login">
+            <form action="../view/USERloginUI.php" method="POST" >
+            <h1 >Log In</h1>
+                <div class="col-auto">
+                    <input type="hidden" id="flag" name="flag" value=1>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="username">
+                    <input class="form-control" type="password" id="password" name="password" placeholder="password">
+                    <button>Sign in</button>
+                    <!-- <div id="form">
+                    <button>Submit</button>
+                </div>
+                <input id ="form" class="form-control" type="submit" value="Submit">-->
+                </div>
+        </div>
+        <?php
+        }
+            ?>
 </head>
 
 <body>

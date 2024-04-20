@@ -1,16 +1,12 @@
 <html>
 
 <head>
+    <link href="style.css" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+    
     <?php
     $uid = $_SESSION['UID'];
     require("../controller/RviewAssignedPapersController.php");
@@ -43,7 +39,10 @@
             echo "<td>"; ?>
             <form action="RviewPaperPage.php" method="POST">
                 <input type="hidden" id="PID" name="PID" value="<?php echo $pid; ?>">
-                <input class="form-control" type="submit" value="View">
+                <div id="form">
+                    <button>View</button>
+                </div>
+                <!-- <input class="form-control" type="submit" value="View"> -->
             </form>
         <?php
             echo "</td>";
