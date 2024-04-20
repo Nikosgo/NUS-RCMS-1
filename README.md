@@ -1,5 +1,5 @@
 # NUS-ISS Research Conference Management System (NUS-RCMS)
-Our project Repo
+Our project Repository
 
 General Collaboration Document: 
 
