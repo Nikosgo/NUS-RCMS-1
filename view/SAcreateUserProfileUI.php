@@ -59,6 +59,17 @@
             </div>
 
         </form>
+        <form class="row" id="forml" action="systemAdminDashboard_userProfiles.php">
+            <div class="col-auto">
+                <button type="submit">Back</button>
+            </div>
+        </form>
+        <script>
+            document.getElementById("forml").addEventListener("submit", function(event){
+                event.preventDefault(); // Prevent the default form submission
+                window.location.href = this.action; // Redirect to systemAdminDashboard.php
+            });
+        </script>
     <?php
     }
     ?>
