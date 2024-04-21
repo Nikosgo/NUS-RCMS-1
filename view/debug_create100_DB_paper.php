@@ -65,6 +65,6 @@ $conn->query($sql);
 }
 $conn->close();
 
-header("Location: http://localhost/314/view");
+header("Location: http://localhost/NUS-RCMS-1/view");
 
 ?>

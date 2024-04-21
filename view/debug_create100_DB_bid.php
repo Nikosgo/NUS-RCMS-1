@@ -57,6 +57,6 @@ for($i=32; $i<=56; $i++){
 
 $conn->close();
 
-header("Location: http://localhost/314/view");
+header("Location: http://localhost/NUS-RCMS-1/view");
 
 ?>

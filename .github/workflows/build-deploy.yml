@@ -1,0 +1,38 @@
+# This workflow will trigger on every push to the main branch, build the Docker image, and push it to AWS ECR, and deploy it to AWS ECS.
+
+name: NUS-RCMS-1 Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker-compose build
+
+    - name: Push Docker image to AWS ECR
+      uses: aws-actions/amazon-ecr-login@v2
+
+    - name: Tag Docker image
+      run: |
+        docker tag your_image_name:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/your_image_name:latest
+
+    - name: Push Docker image to AWS ECR
+      run: |
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/your_image_name:latest
+
+    - name: Deploy to AWS ECS
+      run: |
+        # Add commands to deploy to AWS ECS here
+
+
+
+        
