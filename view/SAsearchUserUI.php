@@ -1,16 +1,12 @@
 <html>
 
 <head>
+    <link href="style.css" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -56,14 +52,20 @@
                 echo "<td>"; ?>
                 <form action="SAeditUserUI.php" method="POST">
                     <input type="hidden" id="UID" name="UID" value="<?php echo $uid; ?>">
-                    <input class="form-control" type="submit" value="Edit">
+                    <div id="form">
+                        <button>Edit</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Edit"> -->
                 </form>
                 <?php
                 echo "</td>";
                 echo "<td>"; ?>
                 <form action="SAdeleteUserUI.php" method="POST">
                     <input type="hidden" id="UID" name="UID" value="<?php echo $uid; ?>">
-                    <input class="form-control" type="submit" value="Delete">
+                    <div id="forml">
+                        <button>Delete</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Delete"> -->
                 </form>
             <?php
                 echo "</td>";
@@ -76,7 +78,10 @@
         <div class="row">
             <div class="col-auto">
                 <form action="systemAdminDashboard.php" method="POST">
-                    <input class="form-control" type="submit" value="Back">
+                    <div id="forml">
+                        <button>Back</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Back"> -->
                 </form>
             </div>
         </div>
@@ -113,7 +118,10 @@
                 <input type="hidden" id="flag" name="flag" value=1>
                 <label for="query" class="form-label">Search:</label><br>
                 <input class="form-control" type="text" id="query" name="query" placeholder="query"><br>
-                <input class="form-control" type="submit" value="Search">
+                <div id="form">
+                        <button>Search</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Search"> -->
             </div>
 
         </form>
@@ -121,7 +129,10 @@
         <div class="row">
             <div class="col-auto">
                 <form action="systemAdminDashboard.php" method="POST">
-                    <input class="form-control" type="submit" value="Back">
+                    <div id="forml">
+                        <button>Back</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Back"> -->
                 </form>
             </div>
         </div>

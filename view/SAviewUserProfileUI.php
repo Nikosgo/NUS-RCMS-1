@@ -1,13 +1,8 @@
 <html>
 
 <head>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
+    
     <?php
     function displayError($msg)
     { //displays error message
@@ -28,7 +23,10 @@
             <form action="SAeditUserProfileUI.php" method="POST">
                 <input type="hidden" id="userProfile" name="userProfile" value="<?php echo $row['userProfile']; ?>">
                 <input type="hidden" id="UPID" name="UPID" value="<?php echo $row['UPID']; ?>">
-                <input class="form-control" type="submit" value="Edit">
+                <div id="form">
+                        <button>Edit</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Edit"> -->
             </form>
     <?php
             echo "</td>";

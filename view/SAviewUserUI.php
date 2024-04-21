@@ -1,13 +1,8 @@
 <html>
 
 <head>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
+    
     <?php
     function displayError($msg)
     { //displays error message
@@ -37,14 +32,23 @@
                 echo "<td>"; ?>
                 <form action="SAeditUserUI.php" method="POST">
                     <input type="hidden" id="UID" name="UID" value="<?php echo $uid; ?>">
-                    <input class="form-control" type="submit" value="Edit">
+                    <div id="form">
+                        <button>Edit</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Edit"> -->
                 </form>
                 <?php
                 echo "</td>";
                 echo "<td>"; ?>
                 <form action="SAdeleteUserUI.php" method="POST">
                     <input type="hidden" id="UID" name="UID" value="<?php echo $uid; ?>">
-                    <input class="form-control" type="submit" value="Delete">
+                    <div id="forml">
+                        <button>Delete</button>
+                    </div>
+                    <!-- <div id="forml">
+                        <button>Delete</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Delete"> -->
                 </form>
     <?php
                 echo "</td>";

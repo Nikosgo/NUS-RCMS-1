@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <link href="style.css" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
@@ -20,19 +22,29 @@
         <!-- Create New Paper Button -->
         <div class="col-auto">
             <form action="AcreatePaperUI.php" method="POST">
-                <input class="form-control" type="submit" value="Create New Paper">
+                <div id="form">
+                    <button>Create New Paper</button>
+                </div>
+                <!-- <input class="form-control" type="submit" value="Create New Paper"> -->
             </form>
         </div>
         <!-- Back button -->
         <div class="col-auto">
             <form action="authorDashboard.php" method="POST">
-                <input class="form-control" type="submit" value="Back">
+                <div id="forml">
+                        <button>Back</button>
+                    </div>
+                    <!-- <input class="form-control" type="submit" value="Back"> -->
             </form>
         </div>
         <!-- Logout Button -->
         <div class="col-auto">
             <form action="USERlogoutUI.php" method="POST">
-                <input class="form-control" type="submit" value="Logout">
+                <div id="forml">
+                    <button>Log Out</button>
+                </div>
+                <!-- <input class="form-control" type="submit" value="Logout"> -->
+            </form>
             </form>
         </div>
     </div>

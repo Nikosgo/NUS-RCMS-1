@@ -1,13 +1,9 @@
 <html>
 
 <head>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
+    
+    
     <?php
     function displayError($msg)
     { //displays error message
@@ -36,7 +32,10 @@
             <!-- WIP -->
             <form action="AviewPaperPage.php" method="POST">
                 <input type="hidden" id="PID" name="PID" value="<?php echo $pid; ?>">
-                <input class="form-control" type="submit" value="View">
+                <div id="form">
+                    <button>View</button>
+                </div>
+                <!-- <input class="form-control" type="submit" value="View"> -->
             </form>
             <?php
             echo "</td>";
