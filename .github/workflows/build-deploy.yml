@@ -1,38 +1,44 @@
 # This workflow will trigger on every push to the main branch, build the Docker image, and push it to AWS ECR, and deploy it to AWS ECS.
-
 name: NUS-RCMS-1 Application
 
 on:
-  push:
-    branches:
-      - main
-
+  push: 
+   branches: # the branch to be deployed
+      - 'main'
+    
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Build Docker image
-      run: docker-compose build
-
-    - name: Push Docker image to AWS ECR
-      uses: aws-actions/amazon-ecr-login@v2
-
-    - name: Tag Docker image
-      run: |
-        docker tag your_image_name:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/your_image_name:latest
-
-    - name: Push Docker image to AWS ECR
-      run: |
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/your_image_name:latest
-
-    - name: Deploy to AWS ECS
-      run: |
-        # Add commands to deploy to AWS ECS here
-
-
-
+    build:
         
+        name: Build Image # build name
+        runs-on: ubuntu-latest # build os
+
+        steps: # sequence of tasks to be executed
+
+            - name: Check out code 
+            # Check the Dockerfile to build the docker image
+              uses: actions/checkout@v2
+            
+            - name: Configure AWS credentials 
+            # Programmatic authentication to aws
+              uses: aws-actions/configure-aws-credentials@v1
+              with:
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws-region: ${{ secrets.AWS_REGION }}
+
+            - name: Login to Amazon ECR
+              id: login-ecr
+              uses: aws-actions/amazon-ecr-login@v1
+
+            - name: Build, tag, and push image to Amazon ECR 
+            # copying the code from repo i.e. Dockerfile, versioning 
+            # the docker image, and pushing it to ECR.
+              env:
+                ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+                ECR_REPOSITORY: nus_rcms_app
+                IMAGE_TAG: ${{ github.sha }}
+              run: |
+                docker-compose build
+                docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+                docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
