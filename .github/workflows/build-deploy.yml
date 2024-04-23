@@ -54,7 +54,7 @@ jobs:
               with:
                 task-definition: ${{ secrets.ECS_TASK_DEFINITION }}
                 container-name: ${{ secrets.CONTAINER_NAME }}
-                image: ${{ steps.build-image.outputs.image }}
+                image: 737531790911.dkr.ecr.ap-southeast-1.amazonaws.com/nus_rcms_app:latest
           
             - name: Deploy Amazon ECS task definition
               uses: aws-actions/amazon-ecs-deploy-task-definition@v1
