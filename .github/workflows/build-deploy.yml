@@ -52,7 +52,7 @@ jobs:
               id: task-def
               uses: aws-actions/amazon-ecs-render-task-definition@v1
               with:
-                task-definition: ${{ secrets.ECS_TASK_DEFINITION }}
+                task-definition: task-definition.json
                 container-name: ${{ secrets.CONTAINER_NAME }}
                 image: 737531790911.dkr.ecr.ap-southeast-1.amazonaws.com/nus_rcms_app:latest
           
