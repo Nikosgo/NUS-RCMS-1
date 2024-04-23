@@ -1,5 +1,8 @@
-<html>
+<?php
+session_start();
+?>
 
+<html>
 <head>
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -12,8 +15,7 @@
         System Admin Dashboard
     </h1>
     <h2>
-        Welcome: <?php session_start();
-                    echo $_SESSION["name"]; ?>
+        Welcome: <?php echo $_SESSION["name"]; ?>
     </h2>
 
     <div class="row">

@@ -14,11 +14,11 @@
 
     function displayError($msg)
     { //displays error message
-        echo"<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/ccDashboard.php';</script>";
+        echo"<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/ccDashboard.php';</script>";
     }
     function displaySuccess($msg, $uid)
     { //displays success message
-        echo"<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/CCemailNotifyUI.php?uid=$uid&status=0';</script>";
+        echo"<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/CCemailNotifyUI.php?uid=$uid&status=0';</script>";
     }
 
     $uid = $_POST['uid'];

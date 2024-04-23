@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 14, 2022 at 10:29 AM
+-- Generation Time: Apr 14, 2024 at 10:29 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -11,17 +11,15 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `db_bid`
---
-
 -- --------------------------------------------------------
+-- Create the database if it doesn't exist and use it
+CREATE DATABASE IF NOT EXISTS `db_bid` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `db_bid`;
 
 --
 -- Table structure for table `tbl_bids`

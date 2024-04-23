@@ -1,5 +1,6 @@
-<html>
+<?php session_start() ?>
 
+<html>
 <head>
     <link href="style.css" rel="stylesheet">
     
@@ -9,11 +10,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
     }
     function displayForm()
     {
@@ -44,7 +45,7 @@
 
 <body>
     <?php
-    session_start();
+    
     //insert support/display functions here
     $userID = $_SESSION['UID'];
     if (isset($_POST['flag'])) {

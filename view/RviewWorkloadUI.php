@@ -13,7 +13,7 @@
     if (!function_exists("displayError")) {
         function displayError($msg)
         { //displays error message
-            echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+            echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
         }
     }
 

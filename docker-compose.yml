@@ -14,10 +14,9 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ""
-      # MYSQL_DATABASE: your_database
-      # MYSQL_USER: your_username
-      # MYSQL_PASSWORD: your_password
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - ./dbscript:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     image: phpmyadmin:latest
@@ -25,6 +24,6 @@ services:
     ports:
       - "8081:80"
     environment:
-      - PMA_ARBITRARY=1
-      # PMA_HOST: db
-      # MYSQL_ROOT_PASSWORD: root_password
+      PMA_ARBITRARY: 1
+      PMA_HOST: mysql_db   
+      MYSQL_ROOT_PASSWORD: ""

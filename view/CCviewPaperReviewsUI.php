@@ -1,5 +1,5 @@
-<html>
 
+<html>
 <head>
     <link href="style.css" rel="stylesheet">
     
@@ -8,7 +8,7 @@
     </script>
     
     <?php
-    $uid = $_SESSION['UID'];
+    //$uid = $_SESSION['UID'];
     require("../controller/CCviewPaperReviewsController.php");
     function noReviews($msg)
     { //call this if no reviews

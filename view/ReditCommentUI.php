@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
     <link href="style.css" rel="stylesheet">
@@ -9,11 +10,11 @@
 
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
     }
     function displayForm($result)
     {
@@ -46,7 +47,6 @@
 
 <body>
     <?php
-    session_start();
     //insert support/display functions here
     require("../controller/ReditCommentController.php");
     $userID = $_SESSION['UID'];

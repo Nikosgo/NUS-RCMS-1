@@ -1,5 +1,5 @@
+<?php session_start() ?>
 <html>
-
 <head>
     <link href="style.css" rel="stylesheet">
     
@@ -8,12 +8,11 @@
     </script>
     
     <?php
-    session_start();
     $uid = $_SESSION['UID'];
     require("../controller/RviewMyBidsController.php");
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
     }
     function displayBiddedPapers($result)
     {
@@ -73,7 +72,7 @@
             </tr>
             <?php
 
-            $viewMyBidsController1 = new viewMyBidsController();
+            $viewMyBidsController1 = new  viewMyBidsController();
             $result = $viewMyBidsController1->viewMyBids($uid);
             if ($result) {
                 displayBiddedPapers($result);

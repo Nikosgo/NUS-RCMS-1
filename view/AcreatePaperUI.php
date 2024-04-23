@@ -1,5 +1,5 @@
+<?php session_start() ?>
 <html>
-
 <head>
     <link href="style.css" rel="stylesheet">
     
@@ -9,11 +9,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/AcreatePaperUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/AcreatePaperUI.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/authorDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/authorDashboard.php';</script>";
     }
     function displayForm(){
         ?>
@@ -46,10 +46,6 @@
 
 <body>
     <?php
-    session_start();
-    //insert support/display functions here
-
-
     if (isset($_POST['flag'])) {
         if ($_POST['flag'] == 1) {
             //retrieve $_POST vars

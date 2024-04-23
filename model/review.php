@@ -1,10 +1,10 @@
 <?php
 class Review
 {
-	private $server = "localhost";
+	private $server = "mysql_db";
 	private $username = "root";
 	private $sqlPassword = "";
-	private $db = "DB_review";
+	private $db = "db_review";
 
 
 	function __construct()

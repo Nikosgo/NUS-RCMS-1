@@ -1,10 +1,10 @@
 <?php
 class UserProfile
 {
-	private $server = "localhost";
+	private $server = "mysql_db";
 	private $username = "root";
 	private $sqlPassword = "";
-	private $db = "DB_profile";
+	private $db = "db_profile";
 
 
 	function __construct($profileName = NULL)

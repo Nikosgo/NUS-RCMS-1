@@ -1,10 +1,10 @@
 <?php
 class Comment
 {
-	private $server = "localhost";
+	private $server = "mysql_db";
 	private $username = "root";
 	private $sqlPassword = "";
-	private $db = "DB_comment";
+	private $db = "db_comment";
 
 
 	function __construct()

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 14, 2022 at 10:29 AM
+-- Generation Time: Apr 14, 2024 at 10:29 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -17,11 +17,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `db_user`
---
 
 -- --------------------------------------------------------
+-- Create the database if it doesn't exist and use it
+CREATE DATABASE IF NOT EXISTS `db_user` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `db_user`;
 
 --
 -- Table structure for table `tbl_users`

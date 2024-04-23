@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <html>
-
 <head>
     <link href="style.css" rel="stylesheet">
     
@@ -12,17 +12,16 @@
     <?php
     //insert support/display functions here
     require("../controller/RviewPaperController.php");
-    session_start();
     $uid = $_SESSION['UID'];
     $viewPaperController1 = new RviewPaperController();
     $pid = $_POST['PID'];
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
     }
     function displaySuccess($msg)
     { //displays success message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/reviewerDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/reviewerDashboard.php';</script>";
     }
     function displayPaper($result){
         $row = $result->fetch_assoc();

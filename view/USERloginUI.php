@@ -1,5 +1,7 @@
+<?php
+ob_start();
+?>
 <html>
-
 <head>
     <link href="styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -22,24 +24,25 @@
     {
         switch ($profile) { //depend on which userProfile, display specific dashboard page
             case "SystemAdmin":
-                header("Location: http://localhost/NUS-RCMS-1/view/systemAdminDashboard.php");
+                header("Location: http://localhost:8080/view/systemAdminDashboard.php");
                 break;
             case "ConferenceChair":
-                header("Location: http://localhost/NUS-RCMS-1/view/ccDashboard.php");
+                header("Location: http://localhost:8080/view/ccDashboard.php");
                 break;
             case "Reviewer":
-                header("Location: http://localhost/NUS-RCMS-1/view/reviewerDashboard.php");
+                header("Location: http://localhost:8080/view/reviewerDashboard.php");
                 break;
             case "Author":
-                header("Location: http://localhost/NUS-RCMS-1/view/authorDashboard.php");
+                header("Location: http://localhost:8080/view/authorDashboard.php");
                 break;
             default:
                 echo "Unknown UserProfile";
         }
+        exit;
     }
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/USERloginUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/USERloginUI.php';</script>";
     }
     function displayLoginUI()
     {
@@ -59,9 +62,9 @@
                 <input id ="form" class="form-control" type="submit" value="Submit">-->
                 </div>
         </div>
-        <?php
-        }
-            ?>
+    <?php
+    }
+    ?>
 </head>
 
 <body>

@@ -8,7 +8,7 @@
         <?php
             function noReviewers($msg)
             { //displays error message
-                echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/ccDashboard.php';</script>";
+                echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/ccDashboard.php';</script>";
             }
             function displayReviewers($result){
                 while ($row = $result->fetch_assoc()) {
