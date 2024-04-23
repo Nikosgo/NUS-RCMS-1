@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <html>
-
 <head>
     <link href="style.css" rel="stylesheet">
     
@@ -13,8 +13,7 @@
         Author Dashboard
     </h1>
     <h2>
-        Welcome: <?php session_start();
-                    echo $_SESSION["name"]; ?>
+        Welcome: <?php echo $_SESSION["name"]; ?>
     </h2>
 
     <div class="row">

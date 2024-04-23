@@ -9,11 +9,11 @@
     <?php
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/CCviewAssignedUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/CCviewAssignedUI.php';</script>";
     }
 
     function displaySuccess($msg) {
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/CCviewAssignedUI.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/CCviewAssignedUI.php';</script>";
     }
 
     function displayForm($result) {
@@ -93,7 +93,6 @@
     <h2> Edit Assigned Paper </h2>
     <?php
     require("../controller/CCeditAssignController.php");
-    session_start();
     if (isset($_POST['flag'])) {
         if ($_POST['flag'] == 1) {
             $newReviewer = $_POST['currReviewer'];

@@ -1,6 +1,6 @@
 <!-- DEBUG: Creates DB and table to store information about bids -->
 <?php
-$servername = "localhost";
+$servername = "mysql_db";
 $username = "root";
 $password = "";
 $dbname = "DB_bid";

@@ -1,6 +1,6 @@
 <!-- DEBUG: Creates DB and table to store information about reviews -->
 <?php
-$servername = "localhost";
+$servername = "mysql_db";
 $username = "root";
 $password = "";
 $dbname = "DB_comment";

@@ -1,10 +1,10 @@
 <?php
 class Paper
 {
-	private $server = "localhost";
+	private $server = "mysql_db";
 	private $username = "root";
 	private $sqlPassword = "";
-	private $db = "DB_paper";
+	private $db = "db_papers";
 
 	function __construct()
 	{

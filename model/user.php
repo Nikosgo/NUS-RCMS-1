@@ -1,10 +1,10 @@
 <?php
 class User
 {
-	private $server = "localhost";
+	private $server = "mysql_db";
 	private $username = "root";
 	private $sqlPassword = "";
-	private $db = "DB_user";
+	private $db = "db_user";
 
 	function __construct()
 	{

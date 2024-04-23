@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <link href="style.css" rel="stylesheet">
     
@@ -12,13 +11,12 @@
     <?php
     //insert support/display functions here
     require("../controller/AviewPaperController.php");
-    session_start();
-    $uid = $_SESSION['UID'];
+    //$uid = $_SESSION['UID'];
     $editPaperController1 = new AviewPaperController();
     $pid = $_POST['PID'];
     function displayError($msg)
     { //displays error message
-        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost/NUS-RCMS-1/view/authorDashboard.php';</script>";
+        echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/authorDashboard.php';</script>";
     }
     function displayPaper($result)
     {
