@@ -9,28 +9,17 @@ class CCassignBidController {
     function __contruct() {
 
     }
+
     function changeBidStatus($pid, $uid) {
         $bid1 = new Bid();
         $bid1->connectDB();
         if ($bid1->removeBiddedPaper($pid, $uid)) {
-            if ($this->assignReviewer($pid, $uid)) {
-                if ($this->updateReviewerAssigned($uid)){
+            if ($this->updateReviewerAssigned($uid)){
                     return true;
                 }
-            }
             else {
                 return false;
             }
-        }
-    }
-    function assignReviewer($pid, $uid) {
-        $paper1 = new Paper();
-        $paper1->connectPaperDB();
-        if ($paper1->assignPaperStatus($pid, $uid, 'assigned')) {
-            return true;
-        }
-        else {
-            return false;
         }
     }
     function updateReviewerAssigned($reviewerID){

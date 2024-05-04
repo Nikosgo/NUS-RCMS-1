@@ -129,7 +129,14 @@ class ExternalEmailService {
         $this->setStatus($statusCode);
     
         curl_close($ch);
-        return $response;
+
+        if ($statusCode === 202) {
+            // Email was accepted by SendGrid for delivery
+            return true;
+        } else {
+            // There was an error sending the email
+            return false;
+        }
     }
 }
 
@@ -162,12 +169,3 @@ class EmailMessage {
         $this->body = $body;
     }
 }
-
-
-/* $emailService = new ExternalEmailService();
-$adapter = new EmailNotificationAdapter($emailService);
-$notification = new Notification();
-$notification->setRecipient('example@example.com');
-$notification->setSubject('Test Subject');
-$notification->setMessage('This is a test message.');
-$adapter->send($notification); */

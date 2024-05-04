@@ -1,4 +1,6 @@
 <?php
+require_once("../model/user.php");
+
 
 interface AllocationStrategy {
     public function allocatePaper($paperList, $reviewerList);
@@ -6,28 +8,42 @@ interface AllocationStrategy {
 
 class AutomaticAllocationStrategy implements AllocationStrategy {
     public function allocatePaper($paperList, $reviewerList) {
-        foreach ($paperList as $paperInfo) {
-            $leastLoadedReviewer = min(array_column($reviewerList, 'currentLoad'));
-            $reviewerIndex = array_search($leastLoadedReviewer, array_column($reviewerList, 'currentLoad'));
+            $user1 = new User();
+            $result = $user1->viewAvailReviewers();
+            $reviewers = [];
+            while ($row = $result->fetch_assoc()) {
+                $reviewers[] = $row;
+            }       
+
+            if (empty($reviewers)) {
+                throw new Exception("No available reviewers found.");
+                return false;
+            }
+
+            $currentLoads = array_column($reviewers, 'workload');
+            $leastLoadedReviewer = min($currentLoads);
+            $reviewerIndex = array_search($leastLoadedReviewer, $currentLoads);
+            if ($reviewerIndex === false) {
+                throw new Exception("Failed to find the least loaded reviewer.");
+                return false;
+            }
+
             $paper = new Paper();
             $paper->connectPaperDB();
-            $paper->assignPaperStatus($paperInfo['pid'], $reviewerList[$reviewerIndex]['uid'], 'assigned');
-            $reviewerList[$reviewerIndex]['currentLoad']++; 
-        }   
+            $paper->assignPaperStatus($paperList, $reviewers[$reviewerIndex]['UID'], 'assigned');
+            $reviewers[$reviewerIndex]['workload']++;   
+            return $reviewers[$reviewerIndex]['UID'];
+        
     }
 }
 
 class ManualAllocationStrategy implements AllocationStrategy {
     public function allocatePaper($paperList, $reviewerList) {
-        foreach ($paperList as $paperInfo) {
-            foreach ($reviewerList as $reviewerInfo){
-                $paper = new Paper();          
-                $paper->connectPaperDB();       
-                if ($paper->assignPaperStatus($paperInfo['pid'], $reviewerInfo['uid'], 'assigned')) {
-                    return true;               
-                }                
-            }  
-        }
+        $paper = new Paper();          
+        $paper->connectPaperDB();       
+        if ($paper->assignPaperStatus($paperList, $reviewerList, 'assigned')) {
+            return true;               
+        }                
         return false;   
     }
 }
@@ -40,16 +56,7 @@ class AllocationContext {
     }
 
     public function executeAllocation($paperList,$reviewerList) {
-        $this->allocationstrategy->allocatePaper($paperList,$reviewerList);
+       return $this->allocationstrategy->allocatePaper($paperList,$reviewerList);
     }
 }
-
-/* // Usage
-$context = new AllocationContext();
-$context->setAllocationStrategy(new AutomaticAllocationStrategy());
-$context->executeAllocation($paperList,$reviewerList);
-
-$context->setAllocationStrategy(new ManualAllocationStrategy());
-$context->executeAllocation($paperList,$reviewerList); */
-
 ?>

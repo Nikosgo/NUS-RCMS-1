@@ -118,4 +118,11 @@ class User
 		$result = $conn->query($sql);
 		return $result;
 	}
+
+	public function getEmailByUID($uid){
+		$conn = new mysqli($this->server, $this->username, $this->sqlPassword, $this->db);
+		$sql = "select email from tbl_users where UID = '$uid'";
+		$result = $conn->query($sql);
+		return $result;
+	}
 }
