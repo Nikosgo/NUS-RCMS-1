@@ -12,6 +12,8 @@
     ob_start();  
     //insert support/display functions here
     require("../controller/CCemailNotifyController.php");
+    require("../controller/emailController.php");
+    require_once("../model/user.php");
 
     function displayError($msg)
     { //displays error message
@@ -24,15 +26,21 @@
 
     $uid = $_GET['uid'];
     $status = $_GET['status'];
-
-    $CCemailNotifyController1 = new CCemailNotifyController();
-    if (!$CCemailNotifyController1->sendMail($uid, $status))
-    {
-        displayError("Error sending email!");
-    }
-    else 
-    {
-        displaySuccess("Email sent to UID: $uid!");
+    $userModel = new User();
+    $result = $userModel->getEmailByUID($uid);
+    $row = $result->fetch_assoc();
+    $email = $row['email'];
+    $emailService = new ExternalEmailService();
+	$adapter = new EmailNotificationAdapter($emailService);
+	$notification = new Notification();
+	$notification->setRecipient($email);
+	$notification->setUid($uid);
+	$notification->setMessage('Conference Chair have assigned you a paper. Please check the assigned paper from RCMS. Thank You');
+	$adapter->send($notification); 
+    if ($adapter->send($notification)) {
+        echo "Email sent successfully!";
+     } else {
+        displayError("Failed to send email.");
     }
     ?>
 </body>

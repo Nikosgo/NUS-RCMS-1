@@ -47,7 +47,7 @@ class Bid
 	}
 	public function viewReadyAssign(){//view all bids with reviewer workload info
 		$conn = new mysqli($this->server, $this->username, $this->sqlPassword, $this->db);
-		$sql = "select b.BID, b.PID, b.UID, u.assigned, u.workload from tbl_bids as b join DB_user.tbl_users as u on b.UID = u.UID;";
+		$sql = "select b.BID, b.PID, b.UID, u.assigned, u.workload from tbl_bids as b join db_user.tbl_users as u on b.UID = u.UID;";
 		$result = $conn->query($sql);
 		return $result;
 	}

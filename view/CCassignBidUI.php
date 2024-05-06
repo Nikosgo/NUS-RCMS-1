@@ -9,6 +9,7 @@
     <body>
         <?php
             require("../controller/CCassignBidController.php");
+            require_once("../controller/allocationStrategyController.php");
             function displayError($msg)
             { //displays error message
                 echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/ccDashboard.php';</script>";
@@ -18,15 +19,35 @@
                 echo "<script type='text/javascript'>alert('$msg'); window.location='http://localhost:8080/view/ccDashboard.php';</script>";
             }
 
-            $pid = $_POST['pid'];
-            $uid = $_POST['uid'];
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $pid = $_POST['pid'];
+                $uid = $_POST['uid'];
+                $allocationType = $_POST['allocationType'];
+                echo "$allocationType";
 
-            $assignController1 = new CCassignBidController();
-            if (!$assignController1->changeBidStatus($pid, $uid)) {
-                displayError("Unable to assign reviewer!");
-            }
-            else {
-                displaySuccess("Assigned reviewer succes! User ID : $uid assigned to Paper ID : $pid");
+                $context = new AllocationContext();
+                if ($allocationType == 'Automatic') {
+                    $context->setAllocationStrategy(new AutomaticAllocationStrategy());
+                    $resultCode = $context->executeAllocation($pid, $uid);
+                    $assignController1 = new CCassignBidController();
+                    if (!$assignController1->changeBidStatus($pid, $uid) || $resultCode === false) {
+                        displayError("Unable to assign reviewer!");
+                    }
+                    else {
+                        displaySuccess("Assigned reviewer successfully! User ID : $resultCode assigned to Paper ID : $pid");
+                    }
+
+                } else {
+                    $assignController1 = new CCassignBidController();
+                    if (!$assignController1->changeBidStatus($pid, $uid)) {
+                        displayError("Unable to assign reviewer!");
+                    }
+                    else {
+                        displaySuccess("Assigned reviewer successfully! User ID : $uid assigned to Paper ID : $pid");
+                    }
+                    $context->setAllocationStrategy(new ManualAllocationStrategy());
+                    $resultCode =  $context->executeAllocation($pid, $uid);    
+                }
             }
         ?>
     </body>

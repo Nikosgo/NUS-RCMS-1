@@ -37,7 +37,8 @@
             <form action="CCassignBidUI.php" method="POST">
                 <input type="hidden" id="pid" name="pid" value="<?php echo $row['PID']; ?>">
                 <input type="hidden" id="uid" name="uid" value="<?php echo $row['UID']; ?>">
-                <input class="form-control" type="submit" value="Assign" <?php if($assigned >= $workload) echo 'disabled'?>>
+                <input class="form-control" type="submit" name="allocationType" value="Automatic">
+                <input class="form-control" type="submit" name="allocationType" value="Manual"<?php if($assigned >= $workload) echo 'disabled'?>>  
             </form>
     <?php
             echo "</td>";
@@ -56,7 +57,7 @@
                 <th>ReviewerID</th>
                 <th>Reviewer Assigned Papers</th>
                 <th>Reviewer Preferred Workload</th>
-                <th></th><!-- Assign -->
+                <th>Assign</th>
             </tr>
             <?php
             require("../controller/CCviewBidsController.php");
