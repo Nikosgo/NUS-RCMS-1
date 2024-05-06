@@ -22,7 +22,9 @@ class EditReviewController
         if ($content == '') return false;
         $review = new Review();
         $review->connectDB();
-        if ($review->editReview($content, $rating, $rid)) {//create review and update in DB_review
+        if ($review->editReview($content, $rating, $rid)) 
+        {
+            //create review and update in DB_review
 			return true;
 		} else return false;
     }

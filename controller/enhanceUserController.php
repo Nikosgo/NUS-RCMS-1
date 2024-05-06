@@ -56,7 +56,8 @@ class EnhancedUser {
 
 // Usage
 $user = new EnhancedUser();
-// You can now call any method on the user object
+
+// can call any method on the user object
 $assignedPapers = $user->viewMyAssignedPapers($uid);
 
 ?>

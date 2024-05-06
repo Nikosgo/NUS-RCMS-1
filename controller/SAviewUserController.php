@@ -1,8 +1,6 @@
 <?php
 require("../model/user.php");
-//require_once("./model/user.php");//for unit test
 class SAviewUserController{
-
     public function __construct(){}
 
     public function viewUser(){

@@ -3,8 +3,6 @@ require("../model/user.php");
 
 class ViewWorkloadController
 {
-
-    //
     function viewWorkload($uid){
 		$user1 = new User();
 		$user1->connectUserDB();

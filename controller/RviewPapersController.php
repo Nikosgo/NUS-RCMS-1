@@ -3,8 +3,6 @@ require("../model/paper.php");
 
 class ViewPapersController
 {
-
-    //$pid, $title, $content, $authorID, $status
     public function reviewerDashboardPapers()
     {
         $paper1 = new Paper();

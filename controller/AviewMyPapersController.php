@@ -3,7 +3,6 @@ require("../model/paper.php");
 
 class ViewMyPapersController
 {
-    //$pid, $title, $content, $authorID, $status
     public function viewMyPapers($uid)
     {
         $paper1 = new Paper();

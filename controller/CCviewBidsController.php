@@ -3,8 +3,6 @@ require("../model/bid.php");
 
 class ViewBidsController
 {
-
-    //$rid, $pid, $uid
     public function viewReadyAssign()
     {
         $bid1 = new Bid();

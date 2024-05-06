@@ -13,5 +13,3 @@ class ViewMyReviewsController
         } else return false;
     }
 }
-
-//viewmyreviews
