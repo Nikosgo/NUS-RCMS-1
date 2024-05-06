@@ -26,7 +26,6 @@
                 <div id="form">
                         <button>Edit</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Edit"> -->
             </form>
     <?php
             echo "</td>";
@@ -42,7 +41,6 @@
             <tr>
                 <th>UPID</th>
                 <th>User Profile</th>
-                <th></th><!-- edit -->
             </tr>
             <?php
             require("../controller/SAviewUserProfileController.php");

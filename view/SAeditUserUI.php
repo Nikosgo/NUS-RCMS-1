@@ -34,11 +34,7 @@
         $userProfile = $row['userProfile'];
         $password = $row['password'];
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
+
         <form action="../view/SAeditUserUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="UID" name="UID" value=<?php echo $uid; ?>>
@@ -55,7 +51,7 @@
                     require("../controller/SAviewUserProfileController.php");
                     $viewUserProfileController = new SAviewUserProfileController();
                     $result1 = $viewUserProfileController->viewUserProfile();
-                    //debug_to_console($result1);
+                    
                     if ($result1->num_rows > 0) {
                         while ($row1 = $result1->fetch_assoc()) { ?>
                             <option value=<?php echo $row1['userProfile'];
@@ -68,7 +64,7 @@
                     <?php
                         }
                     }
-                    //else echo "<option value='error' selected>Error</option>";
+                    
                     ?>
                 </select><br>
                 <div id="form">

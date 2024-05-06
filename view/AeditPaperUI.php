@@ -44,7 +44,6 @@
                 <div id="form">
                     <button>Submit</button>
                 </div>
-                <!-- <input id ="form" class="form-control" type="submit" value="Submit">-->
             </div>
 
         </form>
@@ -57,11 +56,6 @@
             $newTitle = $_POST['title'];
             $newContent = $_POST['content'];
             $newcoAuthor = $_POST['coAuthor'];
-            //$profileName = $_POST["userProfile"]; //may reuse for add another author 
-            //require("");//require controller
-            //instantiate controller
-            //$Controller1 = new Controller();
-            //if(function return false/error)
             if (!$editPaperController1->editPaper($newTitle, $newContent, $pid, $newcoAuthor)) {
                 displayError("Update Failed! Please verify input fields.");
             }
@@ -69,8 +63,6 @@
             else {
                 displaySuccess("Paper updated successfully!");
             }
-            //else
-            //extract and display data
         }
     } else {
         $result = $editPaperController1->searchPID($pid);
@@ -86,7 +78,6 @@
             <input class="form-control" type="submit" value="Return to Dashboard">
         </form>
     </div>
-
 </body>
 
 </html>

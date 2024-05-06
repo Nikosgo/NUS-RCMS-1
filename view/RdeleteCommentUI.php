@@ -22,7 +22,6 @@
     }
     
     $cid = $_POST['CID'];
-
     $RdeleteCommentController1 = new RdeleteCommentController();
     if (!$RdeleteCommentController1->RdeleteComment($cid)){
         displayError("Comment Deletion Fail!");
@@ -31,6 +30,7 @@
         displaySuccess("Comment Deleted! CID: $cid removed");
     }
     ?>
+
 </body>
 
 </html>

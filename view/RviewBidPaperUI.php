@@ -49,10 +49,8 @@
     if($result) displayPaper($result);
     else displayError("Failed to display Paper!");
     ?>
-    <!-- Rating number -->
-    <!-- Ratings-->
     <br><br>
-    <!-- Return back to dashboard-->
+    <!-- Return to dashboard-->
     <div class="col-auto">
         <form action="RviewMyBidsUI.php" method="POST">
             <input class="form-control" type="submit" value="Return to My Bids">

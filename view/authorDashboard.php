@@ -24,7 +24,6 @@
                 <div id="form">
                     <button>Create New Paper</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Create New Paper"> -->
             </form>
         </div>
         <!-- View My Papers Button -->
@@ -33,7 +32,6 @@
                 <div id="form">
                     <button>View My Papers</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="View My Papers"> -->
             </form>
         </div>
         <!-- Search Papers Button -->
@@ -42,7 +40,6 @@
                 <div id="form">
                     <button>Search Papers</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Search Papers"> -->
             </form>
         </div>
         <!-- Logout Button -->
@@ -51,7 +48,6 @@
                 <div id="forml">
                     <button>Log Out</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Logout"> -->
             </form>
             </form>
         </div>
@@ -60,9 +56,6 @@
     <div class="displayTable">
         <?php require("AviewPapersUI.php"); //displayPapers()?>
     </div>
-
 </body>
-
-<!--test-->
 
 </html>

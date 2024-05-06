@@ -62,7 +62,6 @@
             <?php
             require("../controller/CCviewBidsController.php");
             $viewBidController1 = new viewBidsController();
-            //
             $result = $viewBidController1->viewReadyAssign();
             if ($result) {
                 displayTable($result);

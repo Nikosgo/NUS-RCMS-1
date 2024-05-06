@@ -33,8 +33,6 @@
             if (!$createUserProfileController1->createUserProfile($profileName)) {
                 displayError("User Profile Creation Failed! Check Inputs!");
             }
-            //handle error
-            //else
             else {
                 displaySuccess("User Profile Creation Sucess!");
             }
@@ -42,11 +40,6 @@
         }
     } else {
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
         <form action="../view/SAcreateUserProfileUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>

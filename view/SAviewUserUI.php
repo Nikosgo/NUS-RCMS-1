@@ -35,7 +35,6 @@
                     <div id="form">
                         <button>Edit</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Edit"> -->
                 </form>
                 <?php
                 echo "</td>";
@@ -45,10 +44,6 @@
                     <div id="forml">
                         <button>Delete</button>
                     </div>
-                    <!-- <div id="forml">
-                        <button>Delete</button>
-                    </div>
-                    <!-- <input class="form-control" type="submit" value="Delete"> -->
                 </form>
     <?php
                 echo "</td>";
@@ -68,8 +63,6 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>User Profile</th>
-                <th></th><!-- edit -->
-                <th></th><!-- delete -->
             </tr>
             <?php
             require("../controller/SAviewUserController.php");

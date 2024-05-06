@@ -65,17 +65,12 @@
             require("../controller/RcreateReviewController.php");
             //instantiate controller
             $createReviewController1 = new CreateReviewController();
-            //$Controller1 = new Controller();
-            //if(function return false/error)
             if (!$createReviewController1->createReview($content, $rating, $reviewerID, $pid)) {
                 displayError("Error Creating Review!");
             }
-            //handle error
             else {
                 displaySuccess("Review Created successfully!");
             }
-            //else
-            //extract and display data
         }
     } else {
         displayForm();

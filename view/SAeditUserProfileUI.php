@@ -69,11 +69,10 @@
             if (!$editUserProfileController1->editUserProfile($profileName, $upid)) {
                 displayError("Edit User Profile Failed! Check input fields!");
             }
-            //else
             else {
                 displaySuccess("Edit User Profile Success!");
             }
-            //extract and display data
+            
         }
     } else {
         $upid = $_POST["UPID"];
@@ -82,11 +81,7 @@
         if($result) displayForm($result);
         else displayError("Display form Error! [DBA error]")
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
+     
         
     <?php
     }

@@ -15,8 +15,6 @@
             echo "$msg";
         }
     }
-
-    //displayError() already called
     //session already started
     if (!function_exists("displayComments")) {
         function displayComments($result1)
@@ -68,8 +66,6 @@
                 <tr>
                     <th>Comment ID</th>
                     <th>Content</th>
-                    <th></th><!-- Edit Button -->
-                    <th></th><!-- Delete Button -->
                 </tr>
                 <?php
 
@@ -81,6 +77,5 @@
         <?php } else noComments("No comments yet!"); ?>
     </div>
 </body>
-<!--viewing this paper's reviews -->
 
 </html>

@@ -86,18 +86,9 @@
             if ($result = $RsearchReviewsController1->searchReview($pid)) {
                 displayTable($result);
             } else displayError("Error: No reviews found!");
-            //if(function return false/error)
-            //handle error
-            //else
-            //extract and display data
         }
     } else {
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
         <!-- displaySearchForm -->
         <h2>Search Reviews</h2>
         <form action="../view/RsearchReviewsUI.php" method="POST" class="row">

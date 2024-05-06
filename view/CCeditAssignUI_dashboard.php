@@ -13,6 +13,7 @@
         require("CCeditAssignUI.php"); // to display assignment table
     ?>
     <br>
+    
     <?php 
         require("CCviewAvailableReviewerUI.php"); // to display available reviewers
     ?>

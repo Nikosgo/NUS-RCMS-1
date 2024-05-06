@@ -23,7 +23,6 @@
 
     $bid = $_POST['BID'];
     $pid = $_POST['PID'];
-
     $bidController1 = new RdeleteBidController();
     if (!$bidController1->deleteBid($bid, $pid)){
         displayError("Delete Bid Failed!");
@@ -32,6 +31,7 @@
         displaySuccess("Delete Bid Success! BID: $bid removed from PID: $pid");
     }
     ?>
+
 </body>
 
 </html>

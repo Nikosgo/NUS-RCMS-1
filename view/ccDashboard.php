@@ -18,7 +18,6 @@
 
     <div class="row">
         <!-- navigation buttons to be implemented here -->
-
         <!-- Search Papers Button -->
         <div class="col-auto">
             <form action="CCsearchPaperUI.php" method="POST">
@@ -52,7 +51,6 @@
                 <div id="forml">
                     <button>Log Out</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Logout"> -->
             </form>
             </form>
         </div>
@@ -63,7 +61,5 @@
     </div>
 
 </body>
-
-<!--test-->
 
 </html>

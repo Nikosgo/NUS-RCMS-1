@@ -36,7 +36,8 @@
 	$notification->setRecipient($email);
 	$notification->setUid($uid);
 	$notification->setMessage('Conference Chair have assigned you a paper. Please check the assigned paper from RCMS. Thank You');
-	$adapter->send($notification); 
+	$adapter->send($notification);
+    
     if ($adapter->send($notification)) {
         echo "Email sent successfully!";
      } else {

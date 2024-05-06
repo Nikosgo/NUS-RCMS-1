@@ -42,7 +42,6 @@
                 <div id="form">
                     <button>View</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="View"> -->
             </form>
         <?php
             echo "</td>";
@@ -68,14 +67,12 @@
             <?php
 
             $viewMyAssignedPapersController1 = new ViewAssignedPapersController();
-            //$title, $paper, $authorName, $file, $reviewerID, $reviewerComment
             $result = $viewMyAssignedPapersController1->viewMyAssignedPapers($uid);
             if ($result) {
                 displayAssignedPapers($result);
             } else displayError("No papers Assigned!");
             ?>
         </table>
-        
     </div>
 </body>
 

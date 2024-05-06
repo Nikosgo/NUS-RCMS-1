@@ -35,7 +35,6 @@
                 <div id="form">
                     <button>View</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="View"> -->
             </form>
             <?php
             echo "</td>";
@@ -54,13 +53,10 @@
                 <th>Author</th>
                 <th>Co Author</th>
                 <th>Status</th>
-                <th></th><!-- view -->
             </tr>
             <?php
-
             require("../controller/AviewPapersController.php");
             $viewPaperController1 = new viewPapersController();
-            //$title, $paper, $authorName, $file, $reviewerID, $reviewerComment
             $result = $viewPaperController1->viewPapers();
             if ($result) {
                 displayPapers($result);

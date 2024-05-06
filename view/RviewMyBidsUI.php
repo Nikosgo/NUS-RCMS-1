@@ -67,8 +67,6 @@
                 <th>Bid ID</th>
                 <th>Paper ID</th>
                 <th>User ID</th>
-                <th></th><!-- View Paper -->
-                <th></th><!-- Delete Bid -->
             </tr>
             <?php
 
@@ -79,7 +77,6 @@
             } else displayError("Error: No papers found!");
             ?>
         </table>
-        <!-- Back Button -->
         <div class="col-auto">
             <form action="reviewerDashboard.php" method="POST">
                 <input class="form-control" type="submit" value="Return to Dashboard">

@@ -73,10 +73,8 @@
                             <?php
                     echo "</td>";
                     echo "<td>"; ?>
-                    <!-- WIP this might not be implemented -->
                             <input class="form-control" type="submit" value="Confirm">
                     </form>
-                    
             <?php
                     echo "</td>";
                     echo "</tr>";

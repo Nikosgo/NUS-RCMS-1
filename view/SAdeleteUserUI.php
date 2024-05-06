@@ -34,38 +34,18 @@
 
     if (isset($_POST['flag'])) {
         if ($_POST['flag'] == 1) {
-            //retrieve $_POST vars
-            //require("");//require controller
-            //instantiate controller
-            //$Controller1 = new Controller();
-            //if(function return false/error)
-            //handle error
-            //else
-            //extract and display data
+        
         }
     } else {
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
-        <!--
-    <form action="../view/SAdeleteUserUI.php" method="POST" class="row">
-        <div class="col-auto">
-            <input type="hidden" id="flag" name="flag" value=1>
-            <br>
-            <div id="form">
-                    <button>Submit</button>
-                </div>
-                <!-- <input id ="form" class="form-control" type="submit" value="Submit">-->
+        
         </div>
 
     </form>
     <form action="debug_create_DB_placeholderUser.php" method="POST">
         <input class="form-control" type="submit" value="Create_DB">
     </form>
-    -->
+    
     <?php
     }
     ?>

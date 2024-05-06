@@ -11,7 +11,6 @@
     <?php
     //insert support/display functions here
     require("../controller/AviewPaperController.php");
-    //$uid = $_SESSION['UID'];
     $editPaperController1 = new AviewPaperController();
     $pid = $_POST['PID'];
     function displayError($msg)
@@ -63,8 +62,6 @@
     } else displayError("Error: Unable to display paper!")
 
     ?>
-    <!-- Rating number -->
-    <!-- Ratings -->
     <br><br>
 
 </body>

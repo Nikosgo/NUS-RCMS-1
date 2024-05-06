@@ -22,7 +22,6 @@
     }
 
     $rid = $_POST['RID'];
-
     $reviewController1 = new DeleteReviewController();
     if (!$reviewController1->deleteReview($rid)){
         displayError("Delete Review Failed!");
@@ -31,6 +30,7 @@
         displaySuccess("Delete Review Success! RID: $rid removed");
     }
     ?>
+
 </body>
 
 </html>

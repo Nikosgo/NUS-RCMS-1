@@ -17,11 +17,6 @@
     }
     function displayForm(){
         ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
         <form action="../view/AcreatePaperUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
@@ -35,7 +30,6 @@
                 <div id="form">
                     <button>Submit</button>
                 </div>
-                <!-- <input id ="form" class="form-control" type="submit" value="Submit">-->
             </div>
 
         </form>
@@ -53,22 +47,15 @@
             $content = $_POST['content'];
             $authorID = $_SESSION['UID'];
             $coAuthor = $_POST['coAuthor'];
-            //$profileName = $_POST["userProfile"]; //may reuse for add another author 
-            //require("");//require controller
             require("../controller/AcreatePaperController.php");
             //instantiate controller
             $createPaperController1 = new CreatePaperController();
-            //$Controller1 = new Controller();
-            //if(function return false/error)
             if (!$createPaperController1->createPaper($title, $content, $authorID, $coAuthor)) {
                 displayError("Upload Failed! Please verify input fields.");
             }
-            //handle error
             else {
                 displaySuccess("Paper uploaded successfully!");
             }
-            //else
-            //extract and display data
         }
     } else {
         displayForm();
@@ -80,9 +67,7 @@
         <form action="authorDashboard.php" method="POST">
             <input class="form-control" type="submit" value="Return to Dashboard">
         </form>
-        
     </div>
-
 </body>
 
 </html>

@@ -31,14 +31,7 @@
     $status = $row['status'];
     $authorName = $row['authorName'];
     $coAuthor = $row['coAuthorName'];
-    //echo $row['authorID'];
-    //echo $GLOBALS['authorID'];
     ?>
-    <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
     <form class="row">
     <div class="col-auto">
                 <label for="Title" class="form-label">Title:</label><br>
@@ -53,8 +46,6 @@
                 <input class="form-control" type="text" id="Status" name="Status" value="<?php echo $status ?>" disabled> <br>
             </div>
     </form>
-    <!-- Rating number -->
-    <!-- Ratings-->
     <br><br>
     <?php
     return $status;

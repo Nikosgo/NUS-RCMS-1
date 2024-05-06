@@ -24,7 +24,6 @@
                 $uid = $_POST['uid'];
                 $allocationType = $_POST['allocationType'];
                 echo "$allocationType";
-
                 $context = new AllocationContext();
                 if ($allocationType == 'Automatic') {
                     $context->setAllocationStrategy(new AutomaticAllocationStrategy());
