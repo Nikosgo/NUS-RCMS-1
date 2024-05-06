@@ -22,11 +22,6 @@
         $row = $result->fetch_assoc();
         $content = $row['content'];
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
         <form action="../view/ReditCommentUI.php" method="POST" class="row">
             <div class="col-auto">
                 <input type="hidden" id="flag" name="flag" value=1>
@@ -36,9 +31,7 @@
                 <div id="form">
                     <button>Submit</button>
                 </div>
-                <!-- <input id ="form" class="form-control" type="submit" value="Submit">-->
             </div>
-
         </form>
     <?php
     }
@@ -56,20 +49,12 @@
             //retrieve $_POST vars
             $content = $_POST['content'];
             $cid = $_POST['CID'];
-            //require("");//require controller
-            //instantiate controller
-            //$ReditCommentController1 = new ReditCommentController();
-            //$Controller1 = new Controller();
-            //if(function return false/error)
             if (!$ReditCommentController1->ReditComment($cid, $content)) {
                 displayError("Error Editing Comment!");
             }
-            //handle error
             else {
                 displaySuccess("Comment Edited Successfully!");
             }
-            //else
-            //extract and display data
         }
     } else {
         $cid = $_POST['CID'];

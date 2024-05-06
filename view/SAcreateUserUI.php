@@ -89,17 +89,10 @@
             else {
                 displaySuccess("User Account Creation Success!");
             }
-            //else
-            //extract and display data
         }
     } else {
         displayForm();
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
        
     <?php
     }

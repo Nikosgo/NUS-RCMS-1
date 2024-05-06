@@ -23,7 +23,6 @@
 
     $uid = $_POST['uid'];
     $pid = $_POST['pid'];
-
     $CCrejectPaperController1 = new CCrejectPaperController();
     if (!$CCrejectPaperController1->rejectPaper($pid, $uid))
     {

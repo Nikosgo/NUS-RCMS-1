@@ -23,7 +23,6 @@
 
     $pid = $_POST['pid'];
     $uid = $_POST['uid'];
-
     $bidController1 = new RcreateBidController();
     if (!$bidController1->createBid($pid, $uid)){
         displayError("Create Bid Failed!");
@@ -32,6 +31,7 @@
         displaySuccess("Create Bid Success! UID: $uid bid on PID: $pid");
     }
     ?>
+    
 </body>
 
 </html>

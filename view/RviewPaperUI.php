@@ -76,16 +76,8 @@
                 </div> -->
             </div>
         </form>
-        <!-- Rating number -->
-        <!-- Ratings-->
         <br><br>
-        <!-- Return back to dashboard not necessary, already in viewReviewsUI
-    <div class="col-auto">
-        <form action="reviewerDashboard.php" method="POST">
-            <input class="form-control" type="submit" value="Return to Dashboard">
-        </form>
-    </div>
-    --><?php
+       <?php
     }
 
     $result = $viewPaperController1->viewPaper($pid);

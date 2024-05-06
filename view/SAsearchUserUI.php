@@ -26,8 +26,6 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>User Profile</th>
-                <th></th><!-- edit -->
-                <th></th><!-- delete -->
             </tr>
             <?php
 

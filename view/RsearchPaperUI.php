@@ -77,26 +77,14 @@
         if ($_POST['flag'] == 1) {
             //retrieve $_POST vars
             $query = $_POST['query'];
-            //require("");//require controller
-            //instantiate controller
-            //$Controller1 = new Controller();
             require("../controller/RsearchPaperController.php");
             $RsearchPaperController1 = new RsearchPaperController();
             if ($result = $RsearchPaperController1->searchPaper($query)) {
                 displayTable($result);
             } else displayError("Error: No papers found!");
-            //if(function return false/error)
-            //handle error
-            //else
-            //extract and display data
         }
     } else {
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
         <!-- displaySearchForm -->
         <h2>Search Papers</h2>
         <form action="../view/RsearchPaperUI.php" method="POST" class="row">

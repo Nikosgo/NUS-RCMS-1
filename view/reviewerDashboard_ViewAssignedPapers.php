@@ -24,7 +24,6 @@
                 <div id="forml">
                         <button>Back</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Back"> -->
             </form>
         </div>
     </div>
@@ -40,7 +39,5 @@
 
 
 </body>
-
-<!--test-->
 
 </html>

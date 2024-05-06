@@ -22,9 +22,7 @@
         <?php require("CCviewPaperReviewsUI.php"); //displayReviews()
         ?>
     </div>
-
     <br><br>
-    
     <!-- Accept Paper Button -->
     <form action="../view/CCacceptPaperUI.php" method="POST" class="row">
         <div class="col-auto">

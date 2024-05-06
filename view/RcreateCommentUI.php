@@ -45,7 +45,6 @@
 
 <body>
     <?php
-    
     //insert support/display functions here
     $userID = $_SESSION['UID'];
     if (isset($_POST['flag'])) {
@@ -57,8 +56,6 @@
             require("../controller/RcreateCommentController.php");
             //instantiate controller
             $createCommentController1 = new CreateCommentController();
-            //$Controller1 = new Controller();
-            //if(function return false/error)
             if (!$createCommentController1->createComment($content, $userID, $reviewID)) {
                 displayError("Error Creating Comment!");
             }
@@ -66,8 +63,6 @@
             else {
                 displaySuccess("Comment Created successfully!");
             }
-            //else
-            //extract and display data
         }
     } else {
         displayForm();

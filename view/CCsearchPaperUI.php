@@ -42,7 +42,6 @@
                 <th>Title</th>
                 <th>AuthorID</th>
                 <th>Status</th>
-                <th></th><!-- view -->
             </tr>
             <?php
 
@@ -67,7 +66,6 @@
                     <div id="form">
                     <button>View</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="View"> -->
                 </form>
             <?php
                 echo "</td>";
@@ -83,7 +81,6 @@
                     <div id="forml">
                         <button>Back</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Back"> -->
                 </form>
             </div>
         </div>
@@ -94,27 +91,15 @@
         if ($_POST['flag'] == 1) {
             //retrieve $_POST vars
             $query = $_POST['query'];
-            //require("");//require controller
-            //instantiate controller
-            //$Controller1 = new Controller();
             require("../controller/CCsearchPaperController.php");
             $CCsearchPaperController1 = new CCsearchPaperController();
             $result = $CCsearchPaperController1->searchPaper($query);
             if ($result) {
                 displayTable($result);
             } else displayError("Error: No papers found!");
-            //if(function return false/error)
-            //handle error
-            //else
-            //extract and display data
         }
     } else {
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
         <h2>Search Papers</h2>
         <!-- displaySearchForm -->
         <?php displayForm() ?>
@@ -125,7 +110,6 @@
                     <div id="forml">
                         <button>Back</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Back"> -->
                 </form>
             </div>
         </div>

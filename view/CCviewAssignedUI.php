@@ -33,26 +33,22 @@
             echo $row['reviewerID'];
             echo "</td>";
             echo "<td>"; ?>
-            <!-- WIP -->
             <form action="CCdeleteAssignmentUI.php" method="POST">
                 <input type="hidden" id="pid" name="pid" value="<?php echo $pid; ?>">
                 <input type="hidden" id="reviewerID" name="reviewerID" value="<?php echo $reviewerID; ?>">
                 <div id="forml">
                         <button>Delete</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Delete"> -->
             </form>
     <?php
             echo "</td>";
             echo "<td>"; ?>
-            <!-- WIP -->
             <form action="CCeditAssignUI_dashboard.php" method="POST">
                 <input type="hidden" id="pid" name="pid" value="<?php echo $pid; ?>">
                 <input type="hidden" id="reviewerID" name="reviewerID" value="<?php echo $reviewerID; ?>">
                 <div id="form">
                         <button>Edit</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Edit"> -->
             </form>
     <?php
             echo "</td>";
@@ -72,8 +68,6 @@
                 <th>Author ID</th>
                 <th>Status</th>
                 <th>Reviewer ID</th>
-                <th></th><!-- Delete -->
-                <th></th><!-- Edit -->
             </tr>
             <?php
             require("../controller/CCviewAssignedController.php");

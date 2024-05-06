@@ -66,8 +66,6 @@
             $rid = $_POST['RID'];
             //instantiate controller
             $editReviewController1 = new EditReviewController();
-            //$Controller1 = new Controller();
-            //if(function return false/error)
             if (!$editReviewController1->editReview($content, $rating, $rid)) {
                 displayError("Error Editing Review!");
             }
@@ -75,8 +73,6 @@
             else {
                 displaySuccess("Review Edited successfully!");
             }
-            //else
-            //extract and display data
         }
     } else {
         $rid = $_POST['RID'];
@@ -93,7 +89,6 @@
             <input class="form-control" type="submit" value="Return to Dashboard">
         </form>
     </div>
-
 </body>
 
 </html>

@@ -21,7 +21,6 @@
 
             $rid = $_POST['rid'];
             $score = $_POST['score'];
-
             $scoreController1 = new AscoreReviewController();
             if (!$scoreController1->scoreReview($score, $rid)) {
                 displayError("Unable to Rate Review! Review ID: $rid Score : $score");

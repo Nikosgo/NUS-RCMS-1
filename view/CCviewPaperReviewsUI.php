@@ -14,8 +14,6 @@
     { //call this if no reviews
         echo "$msg";
     }
-    //session already started
-
     function displayReviewedPapers($result)
     {
         while ($row = $result->fetch_assoc()) {
@@ -36,7 +34,7 @@
             echo "</td>";
             echo "<td>";
             echo $row['score'];
-            echo "</td>"; ?> <!-- no paper id, already specific to one paper -->
+            echo "</td>"; ?> 
     <?php
 
         }
@@ -70,7 +68,5 @@
             ?>
         </table>
         <?php } else noReviews("No reviews yet!"); ?>
-
 </body>
-<!--viewing this paper's reviews -->
 </html>

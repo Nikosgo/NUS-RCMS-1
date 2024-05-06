@@ -40,7 +40,6 @@
                     <div id="form">
                     <button>View</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="View"> -->
                 </form>
                 <?php
                 echo "</td>";
@@ -82,14 +81,10 @@
                     <th>Author</th>
                     <th>Co Author</th>
                     <th>Status</th>
-                    <th></th><!-- View -->
-                    <th></th><!-- Edit Paper -->
-                    <th></th><!-- delete -->
                 </tr>
                 <?php
                 require("../controller/AviewMyPapersController.php");
                 $viewMyPaperController1 = new viewMyPapersController();
-                //$title, $paper, $authorName, $file, $reviewerID, $reviewerComment
                 $result = $viewMyPaperController1->viewMyPapers($_SESSION['UID']);
                 if ($result) {
                     displayTable($result);
@@ -98,6 +93,7 @@
             </table>
         </div>
         <br><br>
+        
         <!-- Return back to dashboard-->
         <div class="col-auto">
             <form action="authorDashboard.php" method="POST">

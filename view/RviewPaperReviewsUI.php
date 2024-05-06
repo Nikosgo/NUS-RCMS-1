@@ -13,7 +13,6 @@
     { //displays error message
         echo "$msg";
     }
-    //displayError() already called
     //session already started
 
     function displayReviewedPapers($result)

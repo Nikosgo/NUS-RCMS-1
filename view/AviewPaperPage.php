@@ -24,8 +24,6 @@
     </div>
 
     <br><br>
-    
-
     <!-- Back Button -->
     <div class="col-auto">
         <form action="authorDashboard.php" method="POST">

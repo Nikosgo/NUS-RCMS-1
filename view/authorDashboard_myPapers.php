@@ -24,7 +24,6 @@
                 <div id="form">
                     <button>Create New Paper</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Create New Paper"> -->
             </form>
         </div>
         <!-- Back button -->
@@ -33,7 +32,6 @@
                 <div id="forml">
                         <button>Back</button>
                     </div>
-                    <!-- <input class="form-control" type="submit" value="Back"> -->
             </form>
         </div>
         <!-- Logout Button -->
@@ -42,7 +40,6 @@
                 <div id="forml">
                     <button>Log Out</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Logout"> -->
             </form>
             </form>
         </div>
@@ -51,9 +48,6 @@
         <?php require("AviewMyPapersUI.php"); //displayPapers()
         ?>
     </div>
-
 </body>
-
-<!--test-->
 
 </html>

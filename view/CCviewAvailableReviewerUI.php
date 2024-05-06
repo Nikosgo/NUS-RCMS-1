@@ -45,7 +45,6 @@
                 <th>Workload Limit</th>
             </tr>
             <?php
-
             require("../controller/CCviewAvailableReviewerController.php");
             $viewReviewerController1 = new CCviewAvailableReviewerController();
             $result = $viewReviewerController1->viewAvailReviewers();

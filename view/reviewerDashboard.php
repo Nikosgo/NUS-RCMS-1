@@ -24,7 +24,6 @@
                 <div id="form">
                     <button>View My Bids</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="View My Bids"> -->
             </form>
         </div>
 
@@ -34,7 +33,6 @@
                 <div id="form">
                     <button>My Assigned Papers</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="My Assigned Papers"> -->
             </form>
         </div>
 
@@ -44,7 +42,6 @@
                 <div id="form">
                     <button>Search Papers</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Search Papers"> -->
             </form>
         </div>
 
@@ -54,7 +51,6 @@
                 <div id="form">
                     <button>Edit Workload</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Edit Workload"> -->
             </form>
         </div>
         <!-- Manage Reviews Button -->
@@ -63,7 +59,6 @@
                 <div id="form">
                     <button>My Reviews</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="My Reviews"> -->
             </form>
         </div>
         
@@ -73,7 +68,6 @@
                 <div id="form">
                     <button>Search Reviews</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Search Reviews"> -->
             </form>
         </div>
 
@@ -83,19 +77,16 @@
                 <div id="forml">
                     <button>Log Out</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Logout"> -->
             </form>
             </form>
         </div>
     </div>
     <br />
     <div class="displayTable">
-        <?php require("RviewPapersUI.php"); //displayPapers()
+        <?php require("RviewPapersUI.php");
         ?>
     </div>
 
 </body>
-
-<!--test-->
 
 </html>

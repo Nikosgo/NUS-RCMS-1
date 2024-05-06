@@ -11,7 +11,6 @@
 <body>
     <?php
     //insert support/display functions here
-    
     $uid = $_SESSION["UID"];
     require("../controller/ReditWorkloadController.php");
     function displayForm($result)
@@ -30,7 +29,6 @@
                 </div>
                 <!-- <input id ="form" class="form-control" type="submit" value="Submit">-->
             </div>
-
         </form>
     <?php
     }
@@ -69,31 +67,16 @@
         if ($result) displayForm($result);
         else displayError("Display Workload Form Failed!");
     ?>
-        <!-- 
-        form action to self
-        set flag
-        take in user input
-    -->
 
     <?php
     }
     ?>
-    <!-- Back Button -->
-    <!-- <div class="row">
-        <form action="reviewerDashboard.php" method="POST">
-            <div id="forml">
-                <button>Back</button>
-            </div>
-            <input class="form-control" type="submit" value="Back"> 
-        </form>
-    </div>-->
     <div class="row">
         <div class="col-auto">
             <form action="reviewerDashboard.php" method="POST">
                 <div id="forml">
                     <button>Back</button>
                 </div>
-                <!-- <input class="form-control" type="submit" value="Back"> -->
             </form>
         </div>
     </div>

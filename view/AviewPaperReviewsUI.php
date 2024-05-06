@@ -7,13 +7,11 @@
     </script>
     
     <?php
-    //$uid = $_SESSION['UID'];
     require("../controller/AviewPaperReviewsController.php");
     function noReviews($msg)
     { //call this if no reviews
         echo "$msg";
     }
-    //session already started
 
     function displayReviewedPapers($result)
     {
@@ -76,8 +74,6 @@
                 <th>Rating</th>
                 <th>Reviewer ID</th>
                 <th>Review Score</th>
-                <th></th><!-- Score +1 -->
-                <th></th><!-- Score -1 -->
             </tr>
             <?php
 
@@ -87,7 +83,5 @@
             ?>
         </table>
         <?php } else noReviews("No reviews yet!"); ?>
-
 </body>
-<!--viewing this paper's reviews -->
 </html>

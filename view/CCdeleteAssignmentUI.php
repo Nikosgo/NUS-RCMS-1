@@ -20,7 +20,6 @@
 
             $pid = $_POST['pid'];
             $reviewerID = $_POST['reviewerID'];
-
             $assignController1 = new CCdeleteAssignmentController();
             if (!$assignController1->deleteAssignment($pid, $reviewerID)) {
                 displayError("Unable to unassign reviewer! Reviewer ID: $reviewerID Paper ID : $pid");
