@@ -1,5 +1,4 @@
 <?php
-//NEW USED FOR SEARCH DELETE AFTER CHECKED
 require("../model/paper.php");
 class RsearchPaperController
 {

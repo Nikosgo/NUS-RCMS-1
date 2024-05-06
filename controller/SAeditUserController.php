@@ -1,6 +1,5 @@
 <?php
 require("../model/user.php");
-//require_once("./model/user.php");//for unit testing
 ?>
 
 <?php

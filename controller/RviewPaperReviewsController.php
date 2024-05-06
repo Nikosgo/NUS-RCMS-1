@@ -14,4 +14,3 @@ class ViewPaperReviewsController
     }
 }
 
-//viewPaperreviews

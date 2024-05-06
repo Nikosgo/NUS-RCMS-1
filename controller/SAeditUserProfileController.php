@@ -1,6 +1,5 @@
 <?php
 require("../model/userProfile.php");
-//require_once("./model/userProfile.php");//for unit testing
 ?>
 
 <?php

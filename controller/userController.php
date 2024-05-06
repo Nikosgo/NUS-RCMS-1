@@ -1,6 +1,6 @@
 <?php
 
-// Define a base User class
+// Define base user class
 class User {
     protected $UID;
     protected $name;

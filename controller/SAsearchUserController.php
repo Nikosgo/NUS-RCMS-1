@@ -1,8 +1,6 @@
 <?php
 require("../model/user.php");
-//require_once("./model/user.php");//for unit testing
 class SAsearchUserController{
-
     public function __construct(){}
 
     public function searchUser($query){

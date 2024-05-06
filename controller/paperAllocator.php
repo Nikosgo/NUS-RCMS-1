@@ -35,7 +35,9 @@ class PaperAllocator {
 
 // Usage
 $allocator = new PaperAllocator($paperList, $reviewerList);
-$allocator->automaticAllocation(); // For automatic allocation
+
+// For automatic allocation
+$allocator->automaticAllocation();
 
 // For manual allocation
 if (!$allocator->manualAllocation()) {

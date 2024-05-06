@@ -13,5 +13,3 @@ class ViewCommentsController
         } else return false;
     }
 }
-
-//viewComments

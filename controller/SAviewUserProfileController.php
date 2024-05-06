@@ -1,8 +1,6 @@
 <?php
 require("../model/userProfile.php");
-//require_once("./model/userProfile.php");//for unit testing
 class SAviewUserProfileController{
-
     public function __construct(){}
 
     public function viewUserProfile(){

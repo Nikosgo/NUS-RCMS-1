@@ -13,7 +13,9 @@ class CreateCommentController
         if ($content == '') return false;
         $comment = new Comment();
         $comment->connectDB();
-        if ($comment->createComment($content, $userID, $reviewID)) {//create review and update in DB_review
+        if ($comment->createComment($content, $userID, $reviewID)) 
+        {
+            //create review and update in DB_review
 			return true;
 		} else return false;
     }

@@ -1,6 +1,5 @@
 <?php
 require("../model/user.php");
-//require_once("./model/user.php");//for unit testing
 ?>
 
 <?php
@@ -9,7 +8,6 @@ class USERLoginController
 	public $email;
 	public $password;
 	public $id;
-
 
 	function __construct()
 	{

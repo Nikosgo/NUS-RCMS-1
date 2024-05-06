@@ -6,7 +6,6 @@ require("../model/paper.php");
 <?php
 class RcreateBidController
 {
-
 	function __construct()
 	{   
 	}
@@ -15,15 +14,18 @@ class RcreateBidController
 		$bid1 = new Bid();
 		$bid1->connectDB();
 		if ($bid1->createBid($pid, $uid)) {
-			if($this->updatePaperStatus($pid)){
+			if($this->updatePaperStatus($pid))
+			{
 				return true;
 			}
 		} else return false;
 	}
-	function updatePaperStatus($pid){
+	function updatePaperStatus($pid)
+	{
 		$paper1 = new Paper();
         $paper1->connectPaperDB();
-		if($paper1->updatePaperStatus($pid, 'bidded')){
+		if($paper1->updatePaperStatus($pid, 'bidded'))
+		{
 			return true;
 		}
 		else return false;
